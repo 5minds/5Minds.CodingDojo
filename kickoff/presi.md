@@ -1,237 +1,98 @@
 class: center, middle
 background-image: url(background-intro.png)
 
-# .Net Blueprint
-## Microservice Architektur
+# 5Minds Coding Dojo
+## Herzlich Willkommen zum Kickoff!
+  
+---
+class: left, middle
+background-image: url(background.png)
+
+## Was ist ein Coding Dojo? 
+
+Wikipedia:
+* Ein Dojo bezeichnet einen Trainingsraum für verschiedene japanische Kampfkünste. 
+* Im übertragenen Sinne steht der Begriff auch für die Gemeinschaft der dort Übenden.
+  
+---
+class: left, middle
+background-image: url(background.png)
+
+## Und warum brauchen wir das?
+
+* Wir sollten unsere Fähigkeiten stets trainieren.
+* Wir sollten unsere Gemeinschaft stärken.
+
+Denn das ist das Fundament unseres Erfolgs!
 
 ???
-Was haben wir überhaupt gemacht  
-Wozu ist das gut  
-Warum ist das gut  
+Beispiel: deutsch/türkische Boxerin, die schneller als das Licht schlägt.
 ---
 class: left, middle
 background-image: url(background.png)
 
-## Wozu dient der Blueprint
+## Katas
 
-* Proof of Concept
-  * Designentscheidungen am praxisnahen Beispiel eruieren
-  * Risiko-Chancen im Voraus erkennen
-  * Vorlage als anfassbare Dokumentation
-
-
----
-class: left, middle
-background-image: url(background.png)
-
-## Wozu dient der Blueprint
-
-* Dem Bootstrapping für das Projekt
-  * Programmrahmen für Wiederverwendung erstellen
-  * Vorlage der Architektur erstellen
-  * Technologien verbinden
+* Ein Kata bezeichnet in der Programmierung eine kleine, abgeschlossene Übung. 
+* Der Name stammt aus den japanischen Kampfkünsten und betont die Bedeutung von Praxis und Wiederholung für das Lernen.
+* Gibt es für jede Ebene der Softwareentwicklung.
+  * Code-, Class-, Application und sogar Architektur-Katas.
+* Laden dazu ein, auch ausserhalb des Dojo immer wieder neu durchgespielt zu werden.
 
 ---
 class: left, middle
 background-image: url(background.png)
 
-## Architektur
+## Katas
 
-### Was sind Microservices?
-
-* Kleine Services
-* Ein Service bildet nur eine Fachlickeit ab
-* Keine direkten abhängigkeiten voneinander
-
-???
-Kleine einheit  
-Horizontale trennung der fachlichkeiten
-
----
-class: left, middle
-background-image: url(background.png)
-
-## Architektur
-
-### Vorteile von Microservices
-
-* Fachliche Trennung
-* Geringe Komplexität
-* Unabhängig voneinander
-  * Einfache Entwicklung
-  * Geringere Fehleranfälligkeit
-  * Höhere Wartbarkeit
-
-???
-Übersichtlich  
-Kein versehetnliches umschubsen  
----
-class: left, middle
-background-image: url(background.png)
-
-## Architektur
-
-### Vorteile von Microservices
-
-* Zukunftssicher durch Austauschbarkeit
-
-???
-Chad Fowler!!!  
-Einzelne Teile lassen sich austauschen  
-Auch durch andere Sprachen  
----
-class: left, middle
-background-image: url(background.png)
-
-## Architektur
-
-### Frontend
-
-* WPF als Frontend Technologie
-  * State-of-the-Art Technologie für die Windows-Plattform
-  * Trennung von grafischen User Interface und Code
-  * Moderne, einheitliche Darstellung
-  * Schnelle Entwicklung
-  * Automatisiertes Testen
-* Austauschbar gegen andere Technologien
-  * Z.B Asp.Net oder Mobile App
+* Wiederholung eines Kata aus verschiedenen Gründen. 
+  * Umsetzung mit einer anderen Programmiersprache.
+  * Entwicklung unter einem anderen Paradigma
+    * Prozedural
+    * Objektorientiert
+    * Funktional
+    * Prototypisch
+  * Austausch durch einen anderen Algorithmus mit unterschiedlichen Schwerpunkten.
+    * kurzer Code
+    * schnelle Ausführung
+    * effizienter Speicherverbrauch
+    * rekursiv statt iterativ oder umgekehrt
 
 ---
 class: left, middle
 background-image: url(background.png)
 
-## Architektur
+## Der Ablauf
 
-### Modulare Transportschicht
+### Vorstellung der Katas (15 Minuten)
 
-* HTTP
-  * Bewährt und Robust
-  * Übersichtlich und Einfach
-* AMQP
-  * Ausfallsicher
-  * Flexibel
-  * Komplexe, skalierende Systeme einfacher realisierbar
-* Austauschbar
+* Pro Dojo können ein oder auch mehrere Katas vorgestellt werden.
+* Aber nur ein Kata wird im Dojo bearbeitet
+* Dazu werden die Katas kurz vorgestellt und ggf. das Ziel beschrieben.
+* Dann wird kurz über das zu lösende Kata abgestimmt.
+* Teambildung (1 bis 3 Personen)
+  
+---
+class: left, middle
+background-image: url(background.png)
+
+## Der Ablauf
+
+### Umsetzungsphase (1 Std.)
+
+* Die Teams verteilen sich und setzen das Kata um.
 
 ---
 class: left, middle
 background-image: url(background.png)
 
-## Architektur
+## Der Ablauf
 
-### Modulare Datenschicht
+### Auswertungsphase (1 Std.)
 
-* Anbindung verschiedenster Datenquellen
-  *	SQL Server, NoSQL Datespeicher (wie z.B. MongoDB) oder REST Service
-* Bestehende Strukturen übertragbar
-* Rundes Sicherheitskonzept
-
----
-class: left, middle
-background-image: url(background.png)
-
-## Architektur
-
-### Autorisierung
-
-* Identity Management über das OAuth2-Protokoll
-  * State-of-the-Art Protokoll für Autorisierung
-  * Integration in bestehende Infrastruktur (Active Directory)
-  * Weitere Applikationen über Single-Sign-On (SSO) einzubinden
-
----
-class: center, middle
-background-image: url(background.png)
-
-![architecture](img/architecture.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_1.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_2.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_3.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_4.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_5.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_6.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_7.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_8.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_9.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-![process](img/process_anim_10.jpg)
-
----
-class: center, middle
-background-image: url(background.png)
-
-## Live Demo
-
----
-class: left, middle
-background-image: url(background.png)
-
-## Fazit
-
-* Technische Konzepte wurden bereits entworfen, getestet und stehen
-  zur Verfügung
-* Neue Anforderungen können schnell und effizient umgesetzt werden
-
-
----
-class: left, middle
-background-image: url(background.png)
-
-## Fazit
-
-* Vorlage an der man sich in der weiteren Entwicklung orientieren kann
- * Gut dokumentierte Struktur für neue Entwickler
- * Wiederverwendbare Strukturen
- * Geringere Zeiten zwischen Auslieferbaren Ständen
+* Die Teams stellen ihre Lösungen vor
+  * maximal 15 Minuten incl. Diskussion
+  * Ist die Gruppe zu groß, wird vorher kurz entschieden welche Lösungen gezeigt werden.
 
 ---
 class: center, middle
