@@ -37,6 +37,7 @@ background-image: url(background.png)
 * Der Name stammt aus den japanischen Kampfkünsten und betont die Bedeutung von Praxis und Wiederholung für das Lernen.
 * Gibt es für jede Ebene der Softwareentwicklung.
   * Code-, Class-, Application und sogar Architektur-Katas.
+* Werden testgetrieben entwickelt.
 * Laden dazu ein, auch ausserhalb des Dojo immer wieder neu durchgespielt zu werden.
 
 ---
