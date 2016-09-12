@@ -21,7 +21,7 @@ background-image: url(background.png)
 ## Und warum brauchen wir das?
 
 * Wir sollten unsere Fähigkeiten stets trainieren.
-* Wir sollten unsere Gemeinschaft stärken.
+* Wir sollten unsere Gemeinschaft stark halten.
 
 Denn das ist das Fundament unseres Erfolgs!
 
