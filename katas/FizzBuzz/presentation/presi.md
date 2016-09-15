@@ -30,6 +30,16 @@ Einige Zahlen sollen dabei nach folgenden Regeln umgewandelt werden:
 .center[Beispiel: 1, 2, Fizz, 4, Buzz, Fizz, 7, ..., 14, FizzBuzz, ... ]
 
 ---
+class: left, middle
+background-image: url(img/background.png)
+
+## Variation
+
+„Fizz“ soll auch zurückgegeben werden, wenn die Zahl eine 3 als Ziffer enthält, z.B. 13.  
+„Buzz“ soll auch zurückgegeben werden, wenn die Zahl eine 5 als Ziffer enthält, z.B. 52.  
+"FizzBuzz" soll auch zurückgegeben werden, wenn die Zahl eine 3 und eine 5 enthält, z.B. 35 oder 53.
+
+---
 class: center, middle
 background-image: url(img/background.png)
 

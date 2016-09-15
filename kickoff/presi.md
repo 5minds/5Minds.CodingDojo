@@ -13,6 +13,8 @@ background-image: url(background.png)
 Wikipedia:
 * Ein Dojo bezeichnet einen Trainingsraum für verschiedene japanische Kampfkünste. 
 * Im übertragenen Sinne steht der Begriff auch für die Gemeinschaft der dort Übenden.
+
+Die Prinzipien der Kampfkünste können und wollen wir uns zunutze machen.
   
 ---
 class: left, middle
@@ -33,8 +35,9 @@ background-image: url(background.png)
 
 ## Katas
 
+* Der Name stammt aus den japanischen Kampfkünsten und beschreibt grundlegende Übungsformen. 
+  * Dabei betont es die Bedeutung von Praxis und Wiederholung für das Lernen.
 * Ein Kata bezeichnet in der Programmierung eine kleine, abgeschlossene Übung. 
-* Der Name stammt aus den japanischen Kampfkünsten und betont die Bedeutung von Praxis und Wiederholung für das Lernen.
 * Gibt es für jede Ebene der Softwareentwicklung.
   * Code-, Class-, Application und sogar Architektur-Katas.
 * Werden testgetrieben entwickelt.
@@ -44,20 +47,20 @@ background-image: url(background.png)
 class: left, middle
 background-image: url(background.png)
 
-## Katas
+## Katas - warum immer und immer wieder die selbe Aufgabe?
 
-* Wiederholung eines Kata aus verschiedenen Gründen. 
-  * Umsetzung mit einer anderen Programmiersprache.
-  * Entwicklung unter einem anderen Paradigma
-    * Prozedural
-    * Objektorientiert
-    * Funktional
-    * Prototypisch
-  * Austausch durch einen anderen Algorithmus mit unterschiedlichen Schwerpunkten.
-    * kurzer Code
-    * schnelle Ausführung
-    * effizienter Speicherverbrauch
-    * rekursiv statt iterativ oder umgekehrt
+* Grundsätzlich: durch Wiederholung wird effektiv eingeprägt!
+
+* Umsetzung mit einer anderen Programmiersprache.
+
+* Entwicklung unter einem anderen Paradigma
+  * Prozedural / objektorientiert / funktional / prototypisch
+
+* Austausch durch einen anderen Algorithmus mit unterschiedlichen Schwerpunkten.
+  * kurzer Code
+  * schnelle Ausführung
+  * effizienter Speicherverbrauch
+  * rekursiv statt iterativ oder umgekehrt
 
 ---
 class: left, middle
