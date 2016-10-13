@@ -21,7 +21,7 @@ background-image: url(img/background.png)
 ## Die Aufgabe
 
 Schreibe eine Funktion, die eine Natürliche Zahlen entgegen nimmt 
-und daraus die nächst höhere Zahl zurückgibt, die aus den selben Ziffern besteht:
+und daraus die nächst höhere Zahl generiert, die aus den selben Ziffern besteht:
 
 * nextBigger(12)==21
 * nextBigger(513)==531
