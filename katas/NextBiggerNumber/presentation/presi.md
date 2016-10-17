@@ -27,6 +27,7 @@ und daraus die nächst höhere Zahl generiert, die aus den selben Ziffern besteh
 * nextBigger(513)==531
 * nextBigger(2017)==2071  
 * nextBigger(459853)==483559
+* nextBigger(59884848459853)==59884848483559
 
 Gibt es keine größere Nummer, soll -1 zurückgegeben werden:
 
