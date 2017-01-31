@@ -1,7 +1,6 @@
 package palindrom
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -28,9 +27,6 @@ func IsPalindrom(input string) (isPalindrom bool) {
 		input = re.ReplaceAllString(input, "")
 
 		reverseInput := reverse(input)
-
-		fmt.Println(input)
-		fmt.Println(reverseInput)
 
 		isPalindrom = reverseInput == input
 	}
