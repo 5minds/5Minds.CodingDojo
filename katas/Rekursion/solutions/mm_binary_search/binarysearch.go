@@ -1,7 +1,11 @@
 package binarysearch
 
+import "fmt"
+
 // SearchRecusion search a term of int in a sorted array
 func SearchRecusion(array []int, searchTerm int) (found bool) {
+
+	fmt.Println(array, searchTerm)
 
 	if len(array) == 0 {
 		found = false
@@ -13,7 +17,22 @@ func SearchRecusion(array []int, searchTerm int) (found bool) {
 		return
 	}
 
-	//idx := len(array) / 2
+	left := 0
+	right := len(array)
+	center := left + ((right - left) / 2)
 
-	return true
+	if array[center] == searchTerm {
+		found = true
+		return
+	}
+
+	if array[center] < searchTerm {
+		newArray := array[center:right]
+		found = SearchRecusion(newArray, searchTerm)
+		return
+	}
+
+	newArray := array[0 : center-1]
+	found = SearchRecusion(newArray, searchTerm)
+	return
 }

@@ -10,7 +10,7 @@ func TestSearchRecusionEmptyArray(t *testing.T) {
 	actual := SearchRecusion(testArray, searchTerm)
 
 	if actual != expected {
-		t.Errorf("SearchRecusion(%s, %s) => %t, want %t", testArray, searchTerm, actual, expected)
+		t.Errorf("SearchRecusion(%d, %d) => %t, want %t", testArray, searchTerm, actual, expected)
 	}
 }
 
@@ -22,7 +22,7 @@ func TestSearchRecusionOneElement(t *testing.T) {
 	actual := SearchRecusion(testArray, searchTerm)
 
 	if actual != expected {
-		t.Errorf("SearchRecusion(%s, %s) => %t, want %t", testArray, searchTerm, actual, expected)
+		t.Errorf("SearchRecusion(%d, %d) => %t, want %t", testArray, searchTerm, actual, expected)
 	}
 }
 
@@ -34,6 +34,6 @@ func TestSearchRecusion(t *testing.T) {
 	actual := SearchRecusion(testArray, searchTerm)
 
 	if actual != expected {
-		t.Errorf("SearchRecusion(%s, %s) => %t, want %t", testArray, searchTerm, actual, expected)
+		t.Errorf("SearchRecusion(%d, %d) => %t, want %t", testArray, searchTerm, actual, expected)
 	}
 }
