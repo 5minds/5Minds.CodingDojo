@@ -13,9 +13,8 @@ func SearchRecusion(array []int, searchTerm int) (found bool) {
 		return
 	}
 
-	left := 0
-	right := len(array)
-	center := left + ((right - left) / 2)
+	len := len(array)
+	center := len / 2
 
 	if array[center] == searchTerm {
 		found = true
@@ -23,7 +22,7 @@ func SearchRecusion(array []int, searchTerm int) (found bool) {
 	}
 
 	if array[center] < searchTerm {
-		newArray := array[center:right]
+		newArray := array[center:len]
 		found = SearchRecusion(newArray, searchTerm)
 		return
 	}
