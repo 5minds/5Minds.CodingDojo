@@ -1,11 +1,7 @@
 package binarysearch
 
-import "fmt"
-
 // SearchRecusion search a term of int in a sorted array
 func SearchRecusion(array []int, searchTerm int) (found bool) {
-
-	fmt.Println(array, searchTerm)
 
 	if len(array) == 0 {
 		found = false

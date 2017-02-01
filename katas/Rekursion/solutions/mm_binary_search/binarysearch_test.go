@@ -26,10 +26,34 @@ func TestSearchRecusionOneElement(t *testing.T) {
 	}
 }
 
-func TestSearchRecusion(t *testing.T) {
+func TestSearchRecusionLow(t *testing.T) {
+	testArray := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	searchTerm := 2
+	expected := true
+
+	actual := SearchRecusion(testArray, searchTerm)
+
+	if actual != expected {
+		t.Errorf("SearchRecusion(%d, %d) => %t, want %t", testArray, searchTerm, actual, expected)
+	}
+}
+
+func TestSearchRecusionHigh(t *testing.T) {
 	testArray := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	searchTerm := 7
 	expected := true
+
+	actual := SearchRecusion(testArray, searchTerm)
+
+	if actual != expected {
+		t.Errorf("SearchRecusion(%d, %d) => %t, want %t", testArray, searchTerm, actual, expected)
+	}
+}
+
+func TestSearchRecusionNotFound(t *testing.T) {
+	testArray := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	searchTerm := 9
+	expected := false
 
 	actual := SearchRecusion(testArray, searchTerm)
 
