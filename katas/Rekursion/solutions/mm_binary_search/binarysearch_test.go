@@ -27,7 +27,7 @@ func TestSearchRecusionOneElement(t *testing.T) {
 }
 
 func TestSearchRecusionLow(t *testing.T) {
-	testArray := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	testArray := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	searchTerm := 2
 	expected := true
 
