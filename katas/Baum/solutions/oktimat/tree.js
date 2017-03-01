@@ -64,9 +64,11 @@ class TreeNode {
   find(value) {
     if (value === this.value) {
       return value;
-    } else if (value > this.value && this.rightNode) {
+    }
+    if (value > this.value && this.rightNode) {
       return 'right/' + this.rightNode.find(value);
-    } else if (value < this.value && this.leftNode) {
+    }
+    if (value < this.value && this.leftNode) {
       return 'left/' + this.leftNode.find(value);
     }
     return 'not found';
@@ -85,9 +87,11 @@ class TreeNode {
   depth() {
     if (this.leftNode && this.rightNode) {
       return 1 + Math.max(this.leftNode.depth(), this.rightNode.depth());
-    } else if (this.leftNode) {
+    }
+    if (this.leftNode) {
       return 1 + this.leftNode.depth();
-    } else if (this.rightNode) {
+    }
+    if (this.rightNode) {
       return 1 + this.rightNode.depth();
     }
     return 1;
