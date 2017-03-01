@@ -20,15 +20,6 @@ class TreeNode {
     return this._value;
   }
 
-  static fromList(list) {
-    if (list.length == 0) return null;
-    let [x, ...xs] = list;
-    let tree = new TreeNode(x);
-    xs.forEach(value => tree.add(value));
-
-    return tree;
-  }
-
   add(value) {
     if (value > this.value) {
       if (this.rightNode) {
@@ -84,17 +75,13 @@ class TreeNode {
     }
   }
 
-  depth() {
-    if (this.leftNode && this.rightNode) {
-      return 1 + Math.max(this.leftNode.depth(), this.rightNode.depth());
-    }
-    if (this.leftNode) {
-      return 1 + this.leftNode.depth();
-    }
-    if (this.rightNode) {
-      return 1 + this.rightNode.depth();
-    }
-    return 1;
+  static fromList(list) {
+    if (list.length == 0) return null;
+    let [x, ...xs] = list;
+    let tree = new TreeNode(x);
+    xs.forEach(value => tree.add(value));
+
+    return tree;
   }
 }
 
@@ -121,6 +108,3 @@ console.log('\nfind 20');
 console.log(tree.find(20));
 console.log('\nfind 99');
 console.log(tree.find(99));
-
-console.log('\ndepth');
-console.log(tree.depth());
