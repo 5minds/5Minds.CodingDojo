@@ -21,6 +21,10 @@ class TreeNode {
   }
 
   add(value) {
+    if (value === this.value) {
+      throw new Error('value already exists');
+    }
+
     if (value > this.value) {
       if (this.rightNode) {
         this._rightNode.add(value);
@@ -33,8 +37,6 @@ class TreeNode {
       } else {
         this._leftNode = new TreeNode(value);
       }
-    } else {
-      throw new Error('value already exists');
     }
 
     return this;
