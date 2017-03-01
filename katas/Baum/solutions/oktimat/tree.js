@@ -82,6 +82,16 @@ class TreeNode {
     }
   }
 
+  depth() {
+    if (this.leftNode && this.rightNode) {
+      return 1 + Math.max(this.leftNode.depth(), this.rightNode.depth());
+    } else if (this.leftNode) {
+      return 1 + this.leftNode.depth();
+    } else if (this.rightNode) {
+      return 1 + this.rightNode.depth();
+    }
+    return 1;
+  }
 }
 
 
@@ -107,3 +117,6 @@ console.log('\nfind 20');
 console.log(tree.find(20));
 console.log('\nfind 99');
 console.log(tree.find(99));
+
+console.log('\ndepth');
+console.log(tree.depth());
