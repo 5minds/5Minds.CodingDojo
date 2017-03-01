@@ -62,7 +62,18 @@ class TreeNode {
     }
     return 'not found';
   }
+
+  infix() {
+    if (this.leftNode) {
+      this.leftNode.infix();
+    }
+    console.log(this.value);
+    if (this.rightNode) {
+      this.rightNode.infix();
+    }
+  }
 }
+
 
 const tree = new TreeNode(30);
 tree.add(15)
@@ -74,5 +85,11 @@ tree.add(15)
   .add(11);
 
 tree.print(0);
+
+console.log('\ninfix');
+tree.infix();
+
+console.log('\nfind 20');
 console.log(tree.find(20));
+console.log('\nfind 99');
 console.log(tree.find(99));
