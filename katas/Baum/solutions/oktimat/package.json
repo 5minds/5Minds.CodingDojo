@@ -10,6 +10,7 @@
     "eslint": "^3.16.1"
   },
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
