@@ -12,28 +12,20 @@ class Tree {
   }
 
   addValue(value) {
-    let currentTree = this;
-    let lastTree = null;
-    let lastDirectionisLeft = false;
-
-    while (currentTree) {
-      lastTree = currentTree;
-      if (value < currentTree.value) {
-        currentTree = currentTree.left;
-        lastDirectionisLeft = true;
-      } else if (value > currentTree.value) {
-        currentTree = currentTree.right;
-        lastDirectionisLeft = false;
+    if (value < this.value) {
+      if (!this.left) {
+        this.left = new Tree(value);
       } else {
-        console.log(`${value} already exists`);
-        return;
+        this.left.addValue(value);
       }
-    }
-    
-    if (lastDirectionisLeft) {
-      lastTree.left = new Tree(value);
+    } else if (value > this.value) {
+      if (!this.right) {
+        this.right = new Tree(value);
+      } else {
+        this.right.addValue(value);
+      }
     } else {
-      lastTree.right = new Tree(value);
+      console.log(`${value} already exists`);
     }
   }
 
@@ -60,5 +52,6 @@ class Tree {
 
 const tree = new Tree(30);
 tree.addValues([15, 20, 7, 60, 11, 40, 79]);
-const path = tree.findValue(11);
-console.log(path);
+console.log(tree);
+//const path = tree.findValue(11);
+//console.log(path);
