@@ -20,6 +20,15 @@ class TreeNode {
     return this._value;
   }
 
+  static fromList(list) {
+    if (list.length == 0) return null;
+    let [x, ...xs] = list;
+    let tree = new TreeNode(x);
+    xs.forEach(value => tree.add(value));
+
+    return tree;
+  }
+
   add(value) {
     if (value > this.value) {
       if (this.rightNode) {
@@ -40,7 +49,7 @@ class TreeNode {
     return this;
   }
 
-  print(layer) {
+  print(layer = 0) {
     console.log('  '.repeat(layer * 2) + this.value);
     if (this.leftNode) {
       console.log('  '.repeat(layer * 2) + '↙');
@@ -72,10 +81,11 @@ class TreeNode {
       this.rightNode.infix();
     }
   }
+
 }
 
 
-const tree = new TreeNode(30);
+let tree = new TreeNode(30);
 tree.add(15)
   .add(60)
   .add(7)
@@ -84,7 +94,11 @@ tree.add(15)
   .add(79)
   .add(11);
 
-tree.print(0);
+tree.print();
+
+tree = TreeNode.fromList([30, 15, 60, 7, 20, 40, 79, 11]);
+
+tree.print();
 
 console.log('\ninfix');
 tree.infix();
