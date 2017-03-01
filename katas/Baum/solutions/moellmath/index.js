@@ -14,19 +14,21 @@ class Tree {
   addValue(value) {
     if (value < this.value) {
       if (!this.left) {
-        this.left = new Tree(value);
-      } else {
-        this.left.addValue(value);
-      }
-    } else if (value > this.value) {
+        return this.left = new Tree(value);
+      } 
+      
+      return this.left.addValue(value);
+    } 
+    
+    if (value > this.value) {
       if (!this.right) {
-        this.right = new Tree(value);
-      } else {
-        this.right.addValue(value);
+        return this.right = new Tree(value);
       }
-    } else {
-      console.log(`${value} already exists`);
+
+      return this.right.addValue(value);
     }
+
+    console.log(`${value} already exists`);
   }
 
   findValue(value) {
