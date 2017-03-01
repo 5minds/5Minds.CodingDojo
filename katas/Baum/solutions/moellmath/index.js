@@ -30,28 +30,28 @@ class Tree {
   }
 
   findValue(value) {
-    let currentTree = this;
-    let lastDirectionisLeft = false;
-    const directions = [];
-
-    while (currentTree) {
-      if (value < currentTree.value) {
-        currentTree = currentTree.left;
-        directions.push('left');
-      } else if (value > currentTree.value) {
-        currentTree = currentTree.right;
-        directions.push('right');
-      } else {
-        return directions;
+    if (value < this.value) {
+      if (!this.left) {
+        return ['value not found'];
       }
+      
+      return ['left'].concat(this.left.findValue(value));
+    }
+    
+    if (value > this.value) {
+      if (!this.right) {
+        return ['value not found'];
+      }
+
+      return ['right'].concat(this.right.findValue(value));
     }
 
-    console.log(`${value} not found`);
+    return [];
   }
 }
 
 const tree = new Tree(30);
 tree.addValues([15, 20, 7, 60, 11, 40, 79]);
 console.log(tree);
-//const path = tree.findValue(11);
-//console.log(path);
+const path = tree.findValue(40);
+console.log(path);
