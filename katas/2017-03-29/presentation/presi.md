@@ -10,9 +10,9 @@ class: content
 
 * Vorstellung
 
-* Themen
+* das Thema
 
-* die Aufgaben
+* die Aufgabe
 
 ---
 
@@ -139,11 +139,80 @@ class: content
   * Ist die Gruppe zu groß, wird vorher kurz entschieden welche Lösungen gezeigt werden.
 
 ---
-class: content
+class: content, center
 
 # Was ist unser Thema?
 
-???
+## Die Langton Ameise
+
+Die Ameise ist eine Turingmaschine mit einem zweidimensionalen Speicher und wurde 1986 von Christopher Langton
+entwickelt.  
+Sie ist ein Beispiel dafür, dass ein deterministisches System aus einfachen Regeln sowohl für den Menschen visuell
+überraschend ungeordnet erscheinende als auch regelmäßig erscheinende Zustände annehmen kann.  
+(Wikipedia)
+
+---
+class: content
+
+# Die Aufgabe
+
+<img src="img/LangtonsAntAnimated.gif" class="wrap align-right"/>
+
+Benötigt werden zwei Lösungen.
+
+* Die erste Lösung ist das Backend und führt den eigentlichen Algorithmus aus.
+
+* Die zweite Lösung nimmt das Ergebnis der ersten Lösung und stellt es graphisch dar.
+
+---
+class: content
+
+# Die Regeln
+
+<img src="img/LangtonsAntAnimated.gif" class="wrap align-right"/>
+
+Die Ameise befindet sich in einem Raster, bestehend aus quadratischen Feldern, die entweder schwarz oder weiß sein
+können.  
+In der Ausgangssituation sind alle Felder weiß und die Ameise schaut in eine bestimmte Richtung. Der Übergang
+zum nächsten Zustand erfolgt nach folgenden Regeln:
+
+1. Auf einem weißen Feld drehe 90 Grad nach rechts; auf einem schwarzen Feld drehe 90 Grad nach links.
+2. Wechsle die Farbe des Feldes (weiß nach schwarz oder schwarz nach weiß).
+3. Schreite ein Feld in der aktuellen Blickrichtung fort.
+
+---
+class: content
+
+# Die Lösung
+
+<img src="img/LangtonsAntAnimated.gif" class="wrap align-right"/>  
+
+* die Funktion nimmt entgegen
+  * die Kantenlänge des Feldes
+  * die Startposition der Ameise
+  * die Blickrichtung der Ameise (n, o , s, w)
+  * die Anzahl der Züge 
+
+* die Funktion speichert eine Datei
+  * mit einer Zeile pro Zug mit
+  * jedem Feld kommasepariert (w, s, nw, ns, ow, os, sw, ss, ww, ws)
+
+---
+class: content
+
+# Die Lösung
+
+<img src="img/LangtonsAntAnimated.gif" class="wrap align-right"/>  
+
+* die Oberfläche nimmt entgegen
+  * den Pfad der Datei
+  * die Zuggeschwindigkeit 
+
+* die Oberfläche gibt aus
+  * das Quadratische Spielfeld
+  * die jeweilgen Farben
+  * ein Ameisensymbol an der korrekten Position mit Drehrichtung
+  * die aktuelle Zugnummer
 
 ---
 
@@ -151,5 +220,4 @@ class: content, center
 
 ## Vielen Dank für Eure Aufmerksamkeit!
 
----
 
