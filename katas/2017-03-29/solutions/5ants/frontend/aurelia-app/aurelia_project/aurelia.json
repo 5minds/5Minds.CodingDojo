@@ -92,6 +92,7 @@
           "scripts/require.js"
         ],
         "dependencies": [
+          "aurelia-http-client",
           "aurelia-binding",
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
