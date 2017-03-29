@@ -14,6 +14,7 @@
                 })
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
+                .UseUrls("http://0.0.0.0:5000")
                 .Build();
 
             host.Run();
