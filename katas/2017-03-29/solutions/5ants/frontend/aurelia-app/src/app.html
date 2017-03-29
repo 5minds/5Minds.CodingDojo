@@ -1,19 +1,27 @@
 <template>
-    <require from="./resources/ants.css"></require>
-    <div>
-        <template repeat.for="row of field">
-            <template repeat.for="box of row">
-                <div if.bind="box === 's'" class="black"></div>
-                <div if.bind="box === 'w'" class="white"></div>
-                <div if.bind="box === 'ns'" class="black north"></div>
-                <div if.bind="box === 'nw'" class="north white"></div>
-                <div if.bind="box === 'ws'" class="west black"></div>
-                <div if.bind="box === 'ww'" class="west white"></div>
-                <div if.bind="box === 'os'" class="east black"></div>
-                <div if.bind="box === 'ow'" class="east white"></div>
-                <div if.bind="box === 'ss'" class="south black"></div>
-                <div if.bind="box === 'sw'" class="south white"></div>
-            </template>
+    <require from="./resources/ants.css" ></require>
+    <div style="width:${l}; height:${l}"class="field">
+        <template repeat.for="box of field">
+                <div if.bind="box === 's'" class="box black"></div>
+                <div if.bind="box === 'w'" class="box white"></div>
+                <div if.bind="box === 'ns'" class="box black north">
+
+                </div>
+                <div if.bind="box === 'nw'" class="box north white">
+
+                </div>
+                <div if.bind="box === 'ws'" class="box west black">
+
+                </div>
+                <div if.bind="box === 'ww'" class="box west white">
+
+                </div>
+                <div if.bind="box === 'os'" class="box east black">
+
+                </div>
+                <div if.bind="box === 'ow'" class="box east white"></div>
+                <div if.bind="box === 'ss'" class="box south black"></div>
+                <div if.bind="box === 'sw'" class="box south white"></div>
         </template>
     </div>
 

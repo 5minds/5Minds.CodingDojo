@@ -7,30 +7,39 @@ export class App {
 
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.field = [['s'], ['w']];
+        this.field = [];
+        this.l = '0px';
     }
 
     attached() {
-        setInterval(() => {
-            return this.httpClient.createRequest('is-username-free')
-                .asGet()
-                .withBaseUrl(this.getServer())
-                .withParams({
-                    kantenlaenge: 50,
-                    startpos: [5, 5],
-                    blickrichtung: 'o'
-                })
-                .send()
-                .then((httpResponse) => {
-                    console.log(httpResponse);
-                    this.field = JSON.parse(httpResponse);
-                });
+        return this.httpClient.createRequest(this.getServer())
+            .asGet()
+            .send()
+            .then((httpResponse) => {
+                const newUrl = `http://192.168.161.41:5000/api/ant/next/${JSON.parse(httpResponse.response)}`;
+                return newUrl;
+            }).then((newUrl) => {
+                setInterval(() => {
 
-        }, 3000);
+                    return this.httpClient.createRequest(newUrl)
+                        .asGet()
+                        .send()
+                        .then((httpRes) => {
+                            const board = JSON.parse(httpRes.response).board;
+                            this.field = board;
 
+                            this.field = this.field.reduce((total, elem) => {
+                                return total.concat(elem);
+                            });
+
+                            this.l = `${Math.sqrt(this.field.length) * 68}px`;
+                        });
+                }, 3000);
+
+            });
     }
 
     getServer() {
-        return 'http://localhost:3000';
+        return 'http://192.168.161.41:5000/api/ant/init/10/3,3/n';
     }
 }

@@ -1,3 +1,7 @@
+.field {
+    background-color:red,
+}
+
 .row {
   vertical-align: top;
 }
@@ -10,7 +14,7 @@
 }
 
 .black {
-   background-color: #333333;
+   background-color: #444444;
 }
 
 .white {
@@ -18,17 +22,27 @@
 }
 
 .north {
-   background-image: '../images/n_ant.png';
+    border-top:5px solid  red;
+        height: 59px;
+    
 }
 
 .south {
-   background-image: '../images/s_ant.png';
+
+
+    border-bottom:5px solid  red;
+        height: 59px;
 }
 
 .west {
-   background-image: '../images/w_ant.png';
+
+    border-left:5px solid  red;
+       width: 59px;
 }
 
 .east {
-   background-image: '../images/e_ant.png';
+
+    border-right:5px solid  red;
+    width: 59px;
+
 }
