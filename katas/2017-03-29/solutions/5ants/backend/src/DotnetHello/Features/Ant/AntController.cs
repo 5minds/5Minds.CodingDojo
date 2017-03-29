@@ -10,15 +10,21 @@ namespace DotnetHello.Features.Ant
         [HttpGet("init/{length}/{startPos}/{direction}")]
         public IActionResult Init(int length, string startPos, string direction)
         {
-            var result = Guid.NewGuid();
+            var posX = length/2;
+            var posY = length/2;
+
+            var result = BoardStore.CreateBoard(length, posX, posY, direction);
 
             return this.Ok(result);
         }
 
-        public IActionResult Next(Guid board) {
-            var result = new Board();
+        [HttpGet("next/{boardId}")]
+        public IActionResult Next(Guid boardId) {
 
-            return this.Ok(result);
+            var board = BoardStore.Boards[boardId];
+            board.Next();
+            
+            return this.Ok(board);
         }
     }
 }
