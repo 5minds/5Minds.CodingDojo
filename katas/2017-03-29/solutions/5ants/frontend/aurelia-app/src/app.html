@@ -1,3 +1,20 @@
 <template>
-  <h1>${message}</h1>
+    <require from="./resources/ants.css"></require>
+    <div>
+        <template repeat.for="row of field">
+            <template repeat.for="box of row">
+                <div if.bind="box === 's'" class="black"></div>
+                <div if.bind="box === 'w'" class="white"></div>
+                <div if.bind="box === 'ns'" class="black north"></div>
+                <div if.bind="box === 'nw'" class="north white"></div>
+                <div if.bind="box === 'ws'" class="west black"></div>
+                <div if.bind="box === 'ww'" class="west white"></div>
+                <div if.bind="box === 'os'" class="east black"></div>
+                <div if.bind="box === 'ow'" class="east white"></div>
+                <div if.bind="box === 'ss'" class="south black"></div>
+                <div if.bind="box === 'sw'" class="south white"></div>
+            </template>
+        </template>
+    </div>
+
 </template>
