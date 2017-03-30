@@ -1,0 +1,48 @@
+.field {
+    background-color:red,
+}
+
+.row {
+  vertical-align: top;
+}
+
+.box {
+  display: inline-block;
+  outline: 2px solid #000000;
+  width: 64px;
+  height: 64px;
+}
+
+.black {
+   background-color: #444444;
+}
+
+.white {
+   background-color: #FFFFFF;
+}
+
+.north {
+    border-top:5px solid  red;
+        height: 59px;
+    
+}
+
+.south {
+
+
+    border-bottom:5px solid  red;
+        height: 59px;
+}
+
+.west {
+
+    border-left:5px solid  red;
+       width: 59px;
+}
+
+.east {
+
+    border-right:5px solid  red;
+    width: 59px;
+
+}
