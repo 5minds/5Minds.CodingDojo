@@ -1,0 +1,57 @@
+/* This file is for your main application css. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+.page-title {
+  display: inline-block;
+  padding-left: 16px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.world {
+  margin: 16px;
+}
+
+.cell {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 4px solid transparent;
+  float: left;
+}
+.cell--s {
+  background: black;
+  color: black;
+}
+.cell--w {
+  background: white;
+}
+
+.ameise--n,
+.ameise--w,
+.ameise--s,
+.ameise--o {
+  background-color: #fcc;
+  text-indent: -10000px;
+  overflow: hidden;
+}
+.ameise--n {
+  border-top: 4px solid red;
+}
+.ameise--w {
+  border-right: 4px solid red;
+}
+.ameise--s {
+  border-bottom: 4px solid red;
+}
+.ameise--o {
+  border-left: 4px solid red;
+}
