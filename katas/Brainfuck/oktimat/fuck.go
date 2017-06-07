@@ -12,7 +12,6 @@ func interpret(commands string) string {
 	var memory [memSize]int
 
 	var pos = 0
-	reader := bufio.NewReader(os.Stdin)
 
 	var bracketCount = 0
 	var output = ""
@@ -32,6 +31,7 @@ func interpret(commands string) string {
 			output += string(memory[pos])
 			fmt.Printf("%c", memory[pos])
 		} else if cmd == ',' {
+			reader := bufio.NewReader(os.Stdin)
 			value, _ := reader.ReadByte()
 			memory[pos] = int(value)
 		} else if cmd == '[' {
