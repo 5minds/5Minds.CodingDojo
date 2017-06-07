@@ -7,17 +7,7 @@ import (
 	"os"
 )
 
-func main() {
-	path := os.Args[1]
-
-	b, error := ioutil.ReadFile(path)
-	if error != nil {
-		fmt.Println(error)
-		return
-	}
-
-	var commands = string(b)
-
+func interpret(commands string) string {
 	const memSize = 1024
 	var memory [memSize]int
 
@@ -25,6 +15,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	var bracketCount = 0
+	var output = ""
 
 	for i := 0; i < len(commands); i++ {
 		var cmd = commands[i]
@@ -38,6 +29,7 @@ func main() {
 		} else if cmd == '-' {
 			memory[pos]--
 		} else if cmd == '.' {
+			output += string(memory[pos])
 			fmt.Printf("%c", memory[pos])
 		} else if cmd == ',' {
 			value, _ := reader.ReadByte()
@@ -71,7 +63,20 @@ func main() {
 				}
 			}
 		}
-
 	}
 
+	return output
+}
+
+func main() {
+	path := os.Args[1]
+
+	b, error := ioutil.ReadFile(path)
+	if error != nil {
+		fmt.Println(error)
+		return
+	}
+
+	var commands = string(b)
+	interpret(commands)
 }
