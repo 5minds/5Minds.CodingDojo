@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+/*
+5Minds orange: #f18f24
+5Minds hell-blau: #1fa8d6
+5Minds dunkel-grau: #4f4c4b
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu';
+  color: #4f4c4b;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Ubuntu';
+  font-weight: normal;
+  color: #1fa8d6;
+}
+
+strong {
+  color: #f18f24;
+}
+
+.remark-slide-content {
+  font-size: 2rem;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  background-position: 50% 0.1875px;
+  padding: 2rem;
+}
+
+.remark-slide-content li {
+  margin-bottom: .5rem;
+}
+
+img {
+  display: block;
+}
+
+.tiny-font {
+  font-size: 1.5rem;
+}
+
+.wrap {
+  max-width: 70%;
+  margin: 2rem 0px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 2rem;
+  max-width: 40%;
+}
+
+.align-left {
+  float: left;
+  margin-right: 2rem;
+  max-width: 59%;
+}
+
+.remark-slide-content h1 {
+  font-size: 2.5rem;
+}
+.remark-slide-content h2 {
+  font-size: 2.75rem;
+}
+.remark-slide-content h3 {
+  font-size: 2.5rem;
+}
+
+.remark-slide-content img {
+  display: inline-block;
+}
+
+.remark-code,
+.remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+.remark-slide-content.code:after,
+.remark-slide-content.content:after,
+.remark-slide-content.image:after {
+  display: block;
+  position: absolute;
+  content: " ";
+  top: 1rem;
+  right: 2rem;
+  width: 260px;
+  height: 70px;
+  background-image: url(../img/_base/logo.5minds.png);
+  background-size: 100% auto;
+}
+
+.remark-slide-content.code,
+.remark-slide-content.content,
+.remark-slide-content.image {
+  background-image: url(../img/_base/background.default.png);
+}
+
+.remark-slide-content.code h1,
+.remark-slide-content.content h1,
+.remark-slide-content.image h1 {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+}
