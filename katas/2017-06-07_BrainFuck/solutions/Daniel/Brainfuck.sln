@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainfuck", "Brainfuck\Brainfuck.csproj", "{55070C12-7A5F-42A3-B3BE-DA6351CB2EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainfuck.Test", "Brainfuck.Test\Brainfuck.Test.csproj", "{2979E86E-4473-4804-A038-65F7241FA263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55070C12-7A5F-42A3-B3BE-DA6351CB2EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55070C12-7A5F-42A3-B3BE-DA6351CB2EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55070C12-7A5F-42A3-B3BE-DA6351CB2EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55070C12-7A5F-42A3-B3BE-DA6351CB2EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2979E86E-4473-4804-A038-65F7241FA263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2979E86E-4473-4804-A038-65F7241FA263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2979E86E-4473-4804-A038-65F7241FA263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2979E86E-4473-4804-A038-65F7241FA263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
