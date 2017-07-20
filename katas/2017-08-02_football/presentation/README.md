@@ -2,15 +2,17 @@
 
 Das Ziel dieser Übung ist es ein Programm zu schreiben, dass anhand von Daten 
 erkennt wenn eine Spielsituation als Abseits angesehen werden kann. 
-Dabei muss man sich erstmal die Abseitsregel genauer ansehen um die Situation als solche erkkennen zu können.
+Dabei muss man sich erstmal die Abseitsregel genauer ansehen um die Situation 
+als solche erkennen zu können.
 Anbei 4 Quellen:
 
-- [Wikipedia](https://de.wikipedia.org/wiki/Abseitsregel)
+- [Wikipedia](https://de.wikipedia.org/wiki/Abseitsregel#Fu.C3.9Fball)
 - [DFB](https://www.dfb.de/schiedsrichter/artikel/abseits-oder-nicht-892/)
 - [Duden](http://www.duden.de/rechtschreibung/Abseits)
 - [Giga](http://www.giga.de/events/bundesliga/artikel/was-ist-abseits-definition-der-regel/)
 
-Die Situation ist ein stark verpixeltes Bild von Oben. Es gibt 5 Testbilder, welche das Programm durchlaufen soll um zu beweisen dass es korrekt Funktioniert.
+Die Situation ist ein stark verpixeltes Bild von Oben. Es gibt 5 Testbilder, 
+welche das Programm durchlaufen soll um zu beweisen dass es korrekt funktioniert.
 
 Das Fußballfeld ist 90 x 120m groß.
 Ein Spieler kann bis zu 3x3 meter Platz einnehmen. 
@@ -44,7 +46,8 @@ oox
 
 Ein einzelner Spieler ist der Schütze, welcher den Ball abschießt. 
 Der Ball ist gekennzeichnet als `@`.
-Es gibt mindestens zwei attackierende Spieler. Den Schützen und die Person die sich möglicherweise im Abseits befindet.
+Es gibt mindestens zwei attackierende Spieler. Den Schützen und die Person die 
+sich möglicherweise im Abseits befindet.
 
 ```
 o+o
@@ -67,7 +70,7 @@ ooo
 ```
 
 Zwischen zwei Teammitgledern ist immer ein Feld platz. 
-Mit `-` zur anschauung verbildlicht:
+Mit `-` zur Anschauung verbildlicht:
 
 ```
 oo-----oooooooooooo
@@ -78,7 +81,8 @@ oo-----oxo-oooooooo
 oooooo-----oooooooo
 ``` 
 
-Gegner können auch ineinander dargestell werden. Ein Kopf um Kopf rennen um das Abseits:
+Gegner können auch ineinander dargestell werden. Ein Kopf um Kopf rennen 
+um das Abseits:
 
 ```
 ooooo+oooooo
