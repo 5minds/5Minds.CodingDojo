@@ -16,9 +16,8 @@ welche das Programm durchlaufen soll, um zu beweisen dass es korrekt funktionier
 
 Das Fußballfeld ist 90 x 120 Meter groß.
 Ein Spieler kann bis zu 3 x 3 Meter Platz einnehmen. 
-Jeder Block, außer die Mittellinie, nimmt 1 Kubikmeter Platz ein.
+Jeder Block, außer die Mittellinie, nimmt 1 Quadratmeter Platz ein.
 Dazu gehören Spieler, Ball und Torrahmen.
-Nach 60m befindet sich die Mittellinie. 
 ```
 oooooooooooooooooooooooooooooooooooIooooooooooooooooooooooooooooooooooo
 oooooooooooooooooooooooooooooooooooIooooooooooooooooooooooooooooooooooo
@@ -81,8 +80,8 @@ oo-----oxo-oooooooo
 oooooo-----oooooooo
 ``` 
 
-Gegner können auch ineinander dargestell werden. Ein Kopf an Kopf Rennen 
-um das Abseits:
+Spieler von zwei Mannschaften können auch ineinander dargestell werden. Ein 
+Zweikampf um das Abseits:
 
 ```
 ooooo+oooooo
