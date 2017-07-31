@@ -203,6 +203,8 @@ oxo    oxo    ++o    ++@    +++
 oox    ooo    o++    oo+    +++
 ```
 
+Verteidiger - Angreifer (mit Ball)
+
 ???
 verteidiger, min. verteidiger, angreifer, angreifer mit ball, max angreifer
 
