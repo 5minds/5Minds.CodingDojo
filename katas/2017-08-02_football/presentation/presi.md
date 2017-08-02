@@ -157,26 +157,22 @@ class: content
 
 ---
 
-class: content, center
+class: content
 
-# Was ist unser Thema?
-
-## Analyse einer Abseitssituation
+# Analyse einer Abseitssituation
 
 Die Situation ist ein stark verpixeltes Bild von Oben. 
 
-* Das Fußballfeld ist 90 x 120 Meter groß.
+* Das Fußballfeld ist 45 x 60 Meter groß.
 * Ein Spieler kann bis zu 3 x 3 Meter Platz einnehmen.
 * Jedes Feld, außer die Mittellinie, nimmt 1 Quadratmeter Platz ein.
 * Nach 60m befindet sich die Mittellinie. 
 
 ---
 
-class: content, center
+class: content
 
-# Grundlegendes
-
-## Abseits
+# Abseitsregeln
 
 Abseits ist wenn:
 
@@ -233,7 +229,7 @@ class: content, center
 
 ## Positionierung
 
-Zwischen zwei Teammitgledern ist immer ein Feld Platz. 
+Zwischen zwei Teammitgliedern ist immer ein Feld Platz. 
 
 Mit `-` zur Anschauung verbildlicht:
 
@@ -252,9 +248,9 @@ class: content, center
 
 ## Zweikampf
 
-Spieler von zwei Mannschaften können auch ineinander dargestell werden. 
+Spieler von zwei Mannschaften können auch ineinander dargestellt werden. 
 
-Ein Zweikampf um das Abseits:
+Ein Zweikampf um den geflankten Ball:
 
 ```
 ooooo+oooooo
