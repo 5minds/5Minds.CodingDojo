@@ -43,4 +43,3 @@ oooooooooooooooooooooooooooooo|oooooooooooooooooooooooooooooo
 oooooooooooooooooooooooooooooo|oooooooooooooooooooooooooooooo
 oooooooooooooooooooooooooooooo|oooooooooooooooooooooooooooooo
 oooooooooooooooooooooooooooooo|oooooooooooooooooooooooooooooo
-(200|0,5)

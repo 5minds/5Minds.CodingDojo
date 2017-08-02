@@ -265,8 +265,8 @@ class: content, center
 
 ## Zusätzliche Informationen
 
-Jedes Foto beinhaltet zusätzlich einen Vektor, der angibt, in welche Richtung 
-der Ball fliegt.
+Link: 
+https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-08-02_football
 
 ---
 
