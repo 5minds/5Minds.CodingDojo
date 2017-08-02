@@ -99,6 +99,8 @@ function calculateOffside(input) {
 
   if (abseits) {
     resultSpan.innerText = "Abseits";
+  } else if (attackerCount === 0 && defenderCount === 0) {
+    result.innerText = "Trainingssituation";
   } else {
     result.innerText = "kein Abseits";
   }
