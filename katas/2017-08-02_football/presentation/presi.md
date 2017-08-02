@@ -20,6 +20,22 @@ class: content
 
 # Wer ist heute Euer Host?
 
+<img src="img/mba.png" class="wrap align-right" width="256" height="256"/>
+
+* Marc Biegota
+
+* Seit April 2016 bei 5Minds
+
+* Senior Software Architekt und leidenschaftlicher Entwickler
+
+* marc.biegota@5minds.de
+
+---
+
+class: content
+
+# Wer ist heute Euer Host?
+
 <img src="img/one_up.png" class="wrap align-right" width="256" height="256"/>
 
 * Julian Jarminowski
