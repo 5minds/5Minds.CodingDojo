@@ -166,7 +166,7 @@ Die Situation ist ein stark verpixeltes Bild von Oben.
 * Das Fußballfeld ist 45 x 60 Meter groß.
 * Ein Spieler kann bis zu 3 x 3 Meter Platz einnehmen.
 * Jedes Feld, außer die Mittellinie, nimmt 1 Quadratmeter Platz ein.
-* Nach 60m befindet sich die Mittellinie. 
+* Nach 30 Metern befindet sich die Mittellinie. 
 
 ---
 
@@ -176,10 +176,10 @@ class: content
 
 Abseits ist wenn:
 
-* Der Spieler zwischen Tor und Ball ist.
+* der Spieler der gegnerischen Torlinie näher ist als der Ball und
 * sich weniger als zwei gegnerische Spieler, egal ob Torwart oder Feldspieler, 
-auf gleicher Höhe mit ihm oder vor ihm befinden
-* Der Spieler sich in der gegnerischen Spielhälfte befindet.
+auf gleicher Höhe mit ihm oder vor ihm befinden und
+* er sich in der gegnerischen Spielhälfte befindet.
 
 
 ---
