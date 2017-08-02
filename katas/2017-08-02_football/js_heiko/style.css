@@ -10,7 +10,14 @@
 }
 
 .result-text {
-  display: block;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.scenario-selector {
+  display: inline-block;
   height: 20px;
   line-height: 20px;
   margin-bottom: 15px;
