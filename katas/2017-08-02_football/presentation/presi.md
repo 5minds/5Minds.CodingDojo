@@ -55,8 +55,6 @@ Wikipedia:
 * Ein Dojo bezeichnet einen Trainingsraum für verschiedene japanische Kampfkünste. 
 
 * Im übertragenen Sinne steht der Begriff auch für die Gemeinschaft der dort Übenden.
-
-Die Prinzipien der Kampfkünste können und wollen wir uns zunutze machen.
   
 ---
 class: content
@@ -72,65 +70,24 @@ Denn das ist das Fundament unseres Erfolgs!
 ---
 class: content
 
-## Katas
+## Unsere Aufgaben - weniger Kata, eher Raumschiff Enterprise
 
-* Der Name stammt aus den japanischen Kampfkünsten und beschreibt grundlegende Übungsformen. 
-  * Dabei betont es die Bedeutung von Praxis und Wiederholung für das Lernen.
-
-* Ein Kata bezeichnet in der Programmierung eine kleine, abgeschlossene Übung. 
-
----
-class: content
-
-## Katas
- 
-* Gibt es für jede Ebene der Softwareentwicklung.
-  * Code-, Class-, Application und sogar Architektur-Katas.
-
-* Werden testgetrieben entwickelt.
-
-* Laden dazu ein, auch ausserhalb des Dojo immer wieder neu durchgespielt zu werden.
+* Spaß am Neuen steht im Mittelpunkt
+* weniger die Repetition
+* keine Formalismen
 
 ---
 class: content
 
-## Katas - warum immer und immer wieder?
+## Der Ablauf - Vorstellung der Aufgabe(n) (15 Minuten)
 
-* Grundsätzlich: durch Wiederholung wird effektiv eingeprägt!
+* Pro Dojo können ein oder auch mehrere Aufgaben vorgestellt werden.
 
-* Umsetzung mit einer anderen Programmiersprache.
+* Aber nur eine Aufgabe wird im Dojo bearbeitet.
 
-* Entwicklung unter einem anderen Paradigma
-  
-  * Prozedural / objektorientiert / funktional / prototypisch
+* Dazu werden die Aufgaben kurz vorgestellt und ggf. das Ziel beschrieben.
 
----
-class: content
-
-## Katas - warum immer und immer wieder?
-
-* Austausch durch einen anderen Algorithmus mit unterschiedlichen Schwerpunkten.
-  
-  * kurzer Code
-  
-  * schnelle Ausführung
-  
-  * effizienter Speicherverbrauch
-  
-  * rekursiv statt iterativ oder umgekehrt
-
----
-class: content
-
-## Der Ablauf - Vorstellung der Katas (15 Minuten)
-
-* Pro Dojo können ein oder auch mehrere Katas vorgestellt werden.
-
-* Aber nur ein Kata wird im Dojo bearbeitet.
-
-* Dazu werden die Katas kurz vorgestellt und ggf. das Ziel beschrieben.
-
-* Dann wird kurz über das zu lösende Kata abgestimmt.
+* Dann wird kurz über das zu lösende Aufgabe abgestimmt.
 
 * Teambildung (1 bis 3 Personen).
   
@@ -139,7 +96,7 @@ class: content
 
 ## Der Ablauf - Umsetzungsphase (1 Std.)
 
-* Die Teams verteilen sich und setzen das Kata um.
+* Die Teams verteilen sich und setzen die Aufgabe um.
 
 * Die Wahl der Sprache liegt bei den Teams.
 
@@ -154,6 +111,18 @@ class: content
   * maximal 15 Minuten incl. Diskussion
   
   * Ist die Gruppe zu groß, wird vorher kurz entschieden welche Lösungen gezeigt werden.
+
+---
+
+class: content
+
+# Analyse einer Abseitssituation
+
+Der DFB hat uns beauftragt, eine Software zu entwickeln, die Spielsituationen eines laufenden Spiels nach allen erdenklichen Aspekten in Echtzeit analysieren kann.
+
+
+* Sprint 0: PoC - Abseitserkennung auf einem statischen Bild
+
 
 ---
 
