@@ -102,10 +102,10 @@ class: content
 
 # Der Auftrag
 
-Wir wurden beauftragt ein Programm zu erstellen, welches eine Route findet, mit welcher die Besucher eine bestimmte Anzahl an Bands sehen können, ohne dabei an einer Bühne zwei Mal vorbei zu müssen.
+Wir wurden beauftragt ein Programm zu erstellen, welches eine Route findet, mit welcher ein Besucher alle Bühnen sehen kann, ohne dabei einen Weg zweimal gehen zu müssen.
 
 
-* Sprint 0: PoC - Routenerstellung auf einem statischen Bild
+* Sprint 0: PoC - Routenerstellung anhand eines Graphen
 
 
 ---
@@ -123,76 +123,6 @@ Die Frage war, ob es einen Weg gibt, mit dem man alle sieben Brücken genau einm
 
 class: content
 
-# Analyse der Karte
-
-Die Situation ist ein stark verpixeltes Bild aus der Vogelperspektive. 
-
-* ```x``` stellt eine leere Fläche dar
-* ```-``` stellt eine Wand dar
-* ```+``` stellt den begehbaren Weg dar
-* ```o``` stellt die Bühne/n dar
-
----
-
-class: content, center
-
-## Die Karte
-
-```
-xxxxxxxxxxxxxxxxxxxxxxxxxx---------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++ooo+++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++o8o+++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++ooo+++-xxxxxxxxxxxxxxx------------------xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-+++++++++ooo+ooo-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-+++++++++++++-xxxxxxxxxxxxxxx-+++++++++o4o+o5o-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-++++ooo++++++-xxxxxxxxxxxxxxx-+++++++++ooo+ooo-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-++++o6o++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxx-++++ooo++++++-xxxxxxxxxxxxxxx-++++++++++++++++-xxxxxxx
-xxxxx-----------------------+--------+-------------------+-----------------------
-xxxx--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxx--+++-------------------------------------------------------------------------
-xx--+++--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xx-+++++-x-----------------------------------------------x-----------xxxxxxxxxxxx
----++-++---+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
--+++---+++++++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-+++--x-----+++++++++++++++++++++++++++++++++++++++++++++---+++++++++-xxxxxxxxxxxx
-----xxxxxx-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++---+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-+++++++++++++++++++++++++++++++++++++++++++++-x-+++++++++-xxxxxxxxxxxx
-xxxxxxxxxx-ooo++++++++++++++++++++++++++++++-++-++-------x-----------xxxxxxxxxxxx
-xxxxxxxxxx-o7o+++++++++++++++++++++++++++++--++-++-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-ooo+++++++++++++++++++++++--------++-++------xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++---------+++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++-------+++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx--------+-----+++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-++++++++++++++++++++++++++++++++++++++++++++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-+++++ooo++++++++++++++ooo+++++++++++++ooo+++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-+++++o3o++++++++++++++o2o+++++++++++++o1o+++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx-+++++ooo++++++++++++++ooo+++++++++++++ooo+++-xxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxx----------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
----
 
 class: content, center
 
@@ -207,7 +137,7 @@ class: content, center
 
 # Was ist die Aufgabe?
 
-## Interpretiert 4 Karten/Abläufe!
+## Interpretiert 5 Abläufe!
 
 Siehe Handout! 
 
