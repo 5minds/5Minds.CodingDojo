@@ -3,14 +3,14 @@
 module.exports = class Graph {
   constructor(){
     this.nodes = [];
-    this.nodesAmount = 0;
   }
 
   findNodeByValue(value){
     let foundNode = null;
+    
     this.nodes.forEach((node) => {
       if(node.value == value){
-        foundNode =  node;
+        foundNode = node;
       }
     });
     return foundNode;
@@ -19,16 +19,23 @@ module.exports = class Graph {
   addEdge(firstNodeValue, secondNodeValue){
     let firstNode = this.findNodeByValue(firstNodeValue);
     let secondNode = this.findNodeByValue(secondNodeValue);
+
     if(firstNode === null){
-      firstNode= new Node(this.nodesAmount, firstNodeValue);
+      firstNode= new Node(firstNodeValue);
       this.nodes.push(firstNode);
-      this.nodesAmount++;
     }
     if(secondNode === null){
-      secondNode = new Node(this.nodesAmount, secondNodeValue);
+      secondNode = new Node(secondNodeValue);
       this.nodes.push(secondNode);
-      this.nodesAmount++;
     }
+
+    this.nodes.sort((a, b) => {
+      if(a.value >= b.value){
+        return 1;
+      }else{
+        return -1;
+      }
+    });
 
     let edge = new Edge(firstNode, secondNode);
     firstNode.addEdge(edge);
@@ -37,16 +44,13 @@ module.exports = class Graph {
 }
 
 class Node {
-  constructor(id, value){
+  constructor(value){
     this.edges = [];
-    this.edgesAmount = 0;
-    this.id = id;
     this.value = value;
   }
 
   addEdge(edge){
     this.edges.push(edge);
-    this.edgesAmount++;
   }
 }
 
