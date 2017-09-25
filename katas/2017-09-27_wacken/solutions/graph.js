@@ -6,12 +6,13 @@ module.exports = class Graph {
   }
 
   findNodeByValue(value){
-    this.nodes.forEach((node, index) => {
-      if(node.value === value){
-        return node;
+    let foundNode = null;
+    this.nodes.forEach((node) => {
+      if(node.value == value){
+        foundNode =  node;
       }
     });
-    return null;
+    return foundNode;
   }
 
   addEdge(firstNodeValue, secondNodeValue){
