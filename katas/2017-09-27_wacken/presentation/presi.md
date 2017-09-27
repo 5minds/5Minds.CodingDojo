@@ -151,7 +151,6 @@ Siehe Handout!
 
 ---
 
-class: content, center
 
 
 class: content, center
@@ -162,5 +161,6 @@ Link:
 https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-09-27_wacken
 
 ---
+class: content, center
 
 Vielen Dank für eure Aufmerksamkeit!
