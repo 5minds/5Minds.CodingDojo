@@ -31,6 +31,35 @@ class: content
 * marc.biegota@5minds.de
 
 ---
+
+class: content
+
+# Wer ist heute Euer Host?
+
+* Steffen Knaup
+
+* Seit Oktober 2016 bei 5Minds
+
+* Auszubildender
+
+* steffen.knaup@5minds.de
+
+---
+
+class: content
+
+# Wer ist heute Euer Host?
+
+* Miguel Carballo Garcia 
+
+* Seit Oktober 2016 bei 5Minds
+
+* Auszubildender
+
+* miguel.garcia@5minds.de
+
+---
+
 class: content
 
 ## Was ist ein Coding Dojo? 
@@ -103,6 +132,7 @@ class: content
 # Der Auftrag
 
 Wir wurden beauftragt ein Programm zu erstellen, welches eine Route findet, mit welcher ein Besucher alle Bühnen sehen kann, ohne dabei einen Weg zweimal gehen zu müssen.
+Der Haken an der Sache ist allerdings, dass man jeden Weg benutzen muss.
 
 
 * Sprint 0: PoC - Routenerstellung anhand eines Graphen
@@ -111,17 +141,17 @@ Wir wurden beauftragt ein Programm zu erstellen, welches eine Route findet, mit 
 ---
 
 
-class: content
+class: content, center
 
-# Das Problem / die Frage
+# Was ist die Aufgabe?
 
-- Das Königsberger Brückenproblem ist eine mathematische Fragestellung des frühen 18. Jahrhunderts, die anhand der sieben Königsberger Pregelbrücken illustriert wurde.
-Die Frage war, ob es einen Weg gibt, mit dem man alle sieben Brücken genau einmal überquert und am Ende wieder zum Startpunkt gelangt.
-- Auf unser Beispiel bezogen heißt das, dass wir einen weg finden müssen, mit dem wir an einem Punkt starten und bestimmte Bühnen ablaufen können, ohne dabei eine Bühne zweimal sehen zu müssen.
-(Siehe Wikipedia)
+## Überprüft 5 Situationen!
+
+Siehe Handout! 
+
 ---
 
-class: content
+class: content, center
 
 
 class: content, center
@@ -132,17 +162,5 @@ Link:
 https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-09-27_wacken
 
 ---
-
-class: content, center
-
-# Was ist die Aufgabe?
-
-## Interpretiert 5 Abläufe!
-
-Siehe Handout! 
-
----
-
-class: content, center
 
 Vielen Dank für eure Aufmerksamkeit!
