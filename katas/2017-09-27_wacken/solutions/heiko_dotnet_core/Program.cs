@@ -61,21 +61,23 @@
                 return;
             }
 
-            foreach (Path path in currentSituation) {
-                bool currentPointIsPartOfCurrentPath = path.point1 == currentPoint || path.point2 == currentPoint;
+            foreach (Path currentPath in currentSituation) {
+                bool currentPointIsPartOfCurrentPath = currentPath.point1 == currentPoint ||
+                                                       currentPath.point2 == currentPoint;
+
                 if (!currentPointIsPartOfCurrentPath) {
                     continue;
                 }
 
-                string targetPoint = path.point1;
-                if (path.point1 == currentPoint) {
-                    targetPoint = path.point2;
+                string targetPoint = currentPath.point1;
+                if (currentPath.point1 == currentPoint) {
+                    targetPoint = currentPath.point2;
                 }
                 
                 List<Path> remainingPossiblePaths = new List<Path>(currentSituation);
                 List<string> currentRoute = new List<string>(route);
                 currentRoute.Add(targetPoint);
-                remainingPossiblePaths.Remove(path);
+                remainingPossiblePaths.Remove(currentPath);
                 findPossiblePaths(startPoint, remainingPossiblePaths, targetPoint, currentRoute);
             }
         }
