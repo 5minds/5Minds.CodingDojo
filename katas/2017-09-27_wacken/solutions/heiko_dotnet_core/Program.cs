@@ -28,19 +28,14 @@
                 new Path(){point1 = "point1", point2 = "point3"},
                 new Path(){point1 = "point1", point2 = "point4"},
                 new Path(){point1 = "point1", point2 = "point5"},
-
                 new Path(){point1 = "point2", point2 = "point3"},
                 new Path(){point1 = "point2", point2 = "point4"},
                 new Path(){point1 = "point2", point2 = "point5"},
-
                 new Path(){point1 = "point3", point2 = "point4"},
                 new Path(){point1 = "point3", point2 = "point7"},
-
                 new Path(){point1 = "point4", point2 = "point8"},
-
                 new Path(){point1 = "point5", point2 = "point6"},
                 new Path(){point1 = "point5", point2 = "point7"},
-
                 new Path(){point1 = "point6", point2 = "point7"},
                 new Path(){point1 = "point7", point2 = "point8"},
             };
@@ -60,15 +55,15 @@
         static void findPossiblePaths(string startPoint, List<Path> situation, string currentPoint, List<string> route) {
             List<Path> currentSituation = new List<Path>(situation);
 
-            if (currentSituation.Count == 0 && startPoint == currentPoint) {
-                Console.WriteLine("path found");
-                foreach (string routePoint in route) {
-                    Console.Write(routePoint + " -> ");
-                }
+            bool validRouteFound = currentSituation.Count == 0 && startPoint == currentPoint;
+            if (validRouteFound) {
+                printRoute(route);
+                return;
             }
 
             foreach (Path path in currentSituation) {
-                if (path.point1 != currentPoint && path.point2 != currentPoint) {
+                bool currentPointIsPartOfCurrentPath = path.point1 == currentPoint || path.point2 == currentPoint;
+                if (!currentPointIsPartOfCurrentPath) {
                     continue;
                 }
 
@@ -82,6 +77,13 @@
                 currentRoute.Add(targetPoint);
                 remainingPossiblePaths.Remove(path);
                 findPossiblePaths(startPoint, remainingPossiblePaths, targetPoint, currentRoute);
+            }
+        }
+
+        public static void printRoute(List<string> route) {
+            Console.WriteLine("route: ");
+            foreach (string routePoint in route) {
+                Console.Write(routePoint + " -> ");
             }
         }
     }
