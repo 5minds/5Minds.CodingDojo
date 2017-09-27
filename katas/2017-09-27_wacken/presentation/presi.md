@@ -154,7 +154,7 @@ class: content, center
 
 ## Überprüft 5 Situationen!
 
-Die 5 Situationen können im [sitations](https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-09-27_wacken/sitations) Ordner gefunden werden! 
+Die 5 Situationen können im [situations](https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-09-27_wacken/situations) Ordner gefunden werden! 
 
 ---
 
