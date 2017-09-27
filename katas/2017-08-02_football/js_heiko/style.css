@@ -1,0 +1,24 @@
+.field {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.field-input {
+  width: 600px;
+  height: 300px;
+  display: block;
+}
+
+.result-text {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.scenario-selector {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
