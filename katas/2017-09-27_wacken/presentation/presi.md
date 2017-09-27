@@ -129,6 +129,13 @@ class: content
 
 class: content
 
+# Die Karte
+
+<img src="img/festival-plan.png" class="" width="741" height="500"/>
+
+---
+class: content
+
 # Der Auftrag
 
 Wir wurden beauftragt ein Programm zu erstellen, welches eine Route findet, mit welcher ein Besucher alle Bühnen sehen kann, ohne dabei einen Weg zweimal gehen zu müssen.
@@ -147,7 +154,7 @@ class: content, center
 
 ## Überprüft 5 Situationen!
 
-Siehe Handout! 
+Die 5 Situationen können im [sitations](https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2017-09-27_wacken/sitations) Ordner gefunden werden! 
 
 ---
 
