@@ -15,7 +15,7 @@ setInterval(() => {
     displayBaseFiveDigits(hourDigits);
     displayBaseFiveDigits(minuteDigits);
     console.log('-----');
-}, 320); // repeat function every 320 milliseconds
+}, 320); // repeat function every 320 milliseconds, so we never skip a second
 
 function calculateBaseFive(baseTenValue) { // g
     const result = [
