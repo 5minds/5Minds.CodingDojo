@@ -15,10 +15,13 @@ setInterval(() => {
     displayBaseFiveDigits(hourDigits);
     displayBaseFiveDigits(minuteDigits);
     console.log('-----');
-}, 1000); 
+}, 320); // repeat function every 320 milliseconds
 
-function calculateBaseFive(baseTenValue) {
-    const result = [Math.floor(baseTenValue / 5), baseTenValue % 5]
+function calculateBaseFive(baseTenValue) { // g
+    const result = [
+        Math.floor(baseTenValue / 5), // lights with value 5
+        baseTenValue % 5              // lights with value 1
+    ]
 
     return result;
 }
