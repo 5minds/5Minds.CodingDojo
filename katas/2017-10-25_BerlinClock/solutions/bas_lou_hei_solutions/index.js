@@ -18,7 +18,6 @@ setInterval(() => {
 }, 1000); 
 
 function calculateBaseFive(baseTenValue) {
-    //const result = `${Math.floor(baseTenValue / 5)}-${baseTenValue % 5}`;
     const result = [Math.floor(baseTenValue / 5), baseTenValue % 5]
 
     return result;
