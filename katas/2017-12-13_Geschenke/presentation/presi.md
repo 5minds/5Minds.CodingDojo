@@ -102,8 +102,10 @@ class: content
 
 # Geschenke!
 
-Der Weihnachtsmann liefert Geschenke an Häuser in einer zwei-dimensionalen Grid-Welt.
-Er beginnt mit der Auslieferung an seinem Startpunkt. Danach gibt ihm ein Elf vom Nordpol per Smartphone die neue Position an. Eine neue Position liegt immer exakt ein Haus im Norden (^), im Süden (v), im Osten (>) oder im Westen (<). Nach jedem Schritt wird ein Paket ausgeliefert.
+Der Weihnachtsmann liefert Geschenke an Häuser in einer zwei-dimensionalen Grid-Welt.  
+Er beginnt mit der Auslieferung an seinem Startpunkt. Danach gibt ihm ein Elf vom Nordpol per Smartphone die neue Position an.  
+Eine neue Position liegt immer exakt ein Haus im Norden (^), im Süden (v), im Osten (>) oder im Westen (<).  
+Nach jedem Schritt wird ein Paket ausgeliefert.
 
 ---
 
@@ -128,9 +130,9 @@ class: content, center
 
 ## Beispiele
 
-">" delivers presents to 2 houses: one at the starting location, and one to the east.
-"^>v<" delivers presents to 4 houses in a square, including twice to the house at his starting/ending location.
-"^v^v^v^v^v" delivers a bunch of presents to some very lucky children at only 2 houses.
+">" liefert Geschenke an zwei Häuser: eines am Startpunkt und eines im Osten.
+"^>v<" liefert Geschenke an vier Häuser im Quadrat. Der Startpunkt erhält sogar zwei Geschenke.
+"^v^v^v^v^v" liefert eine ganze Menge Geschenke an einige glückliche Kinder in nur zwei Häusern.
 
 
 ---
