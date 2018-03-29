@@ -18,8 +18,8 @@ age = 0
 while(True):
     age = age + 1
 
-    males = list(filter(lambda m: m < (8*12), males)) #males[lambda m:m < (8*12)])
-    females = list(filter(lambda f: f < (8*12), females)) #females[lambda f:f < (8*12)])
+    males = list(filter(lambda m: m < (8*12), males))
+    females = list(filter(lambda f: f < (8*12), females))
 
     breeder = len(list(filter(lambda f:f >= 4, females)))
 
