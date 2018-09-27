@@ -7,7 +7,7 @@
     {
        static void Main(string[] args)
         {
-            int[] values = new int[] { 30, 15, 60, 7, 20, 14, 79, 11 };
+            int[] values = new int[] { 30, 15, 60, 7, 20, 14, 79, 11, 12 };
             Tree root = new Tree(values);
             
             var result = root.Sort();
