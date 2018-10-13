@@ -1,49 +1,45 @@
 document.getElementById("filepicker").addEventListener("change", function(event) {
   clearList();
-  let doublicate = new Duplicate(event.target.files);
+  let dublicate = new Duplicate(event.target.files);
   const sel_mod = document.getElementById("sel_mod");
   const mod = sel_mod.options[sel_mod.selectedIndex].value;
   
-  const sel_doublicate = document.getElementById("sel_doublicate");
-  sel_doublicate.options.length = 0;
-  sel_doublicate.innerHTML = "";
+  const sel_dublicate = document.getElementById("sel_dublicate");
+  sel_dublicate.options.length = 0;
+  sel_dublicate.innerHTML = "";
   
-  const candidates = doublicate.getCandidates(mod);
+  const candidates = dublicate.getCandidates(mod);
   candidates.forEach((candidate, index) => {
-    sel_doublicate.options[sel_doublicate.options.length] = new Option(candidate.name, index);
+    sel_dublicate.options[sel_dublicate.options.length] = new Option(candidate.name, index);
   });
   
-  sel_doublicate.addEventListener("change", function () {
+  sel_dublicate.addEventListener("change", function () {
     clearList();
-    checkDouplicate();
-    async function checkDouplicate() {
-      await doublicate.checkCandidate(candidates[sel_doublicate.options[sel_doublicate.selectedIndex].value]).then(res => {
-        console.log(res);
-        const ul_coublicate = document.getElementById("ul_doublicate");
+    checkDuplicate();
+    async function checkDuplicate() {
+      await dublicate.checkCandidate(candidates[sel_dublicate.options[sel_dublicate.selectedIndex].value]).then(res => {
+        const ul_dublicate = document.getElementById("ul_dublicate");
         for (let key in res) {
           if (res.hasOwnProperty(key)) {
             let val = res[key];
-            console.log("key", key);
-            console.log("val", val);
             let li = document.createElement("li");
             let liText = "Filename: "+val[0].name+" located here:";
             val.forEach(item => {
               liText += ' "'+item.webkitRelativePath+'" ';
             });
             li.appendChild(document.createTextNode(liText));
-            ul_coublicate.appendChild(li);
+            ul_dublicate.appendChild(li);
           }
         }
       });
     }
-    //console.log(doublicate.checkCandidate(candidates[sel_doublicate.options[sel_doublicate.selectedIndex].value]));
   }, false);
   
   document.getElementById("filepicker").value = '';
 }, false);
 
 function clearList(){
-  const ul_coublicate = document.getElementById("ul_doublicate");
+  const ul_coublicate = document.getElementById("ul_dublicate");
   ul_coublicate.innerHTML = "";
 }
 

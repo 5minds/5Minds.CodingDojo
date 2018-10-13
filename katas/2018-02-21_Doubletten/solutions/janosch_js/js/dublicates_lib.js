@@ -86,18 +86,18 @@ class Duplicate {
     
     const md5s = await createMd5FromFiles();
     
-    function filterDouplicates(candidates) {
-      const doublicates = {};
+    function filterDuplicates(candidates) {
+      const dublicates = {};
       for (let i=0; i < candidates.length; i++){
-        if(!doublicates[candidates[i].md5]){
-          doublicates[candidates[i].md5] = [candidates[i].file];
+        if(!dublicates[candidates[i].md5]){
+          dublicates[candidates[i].md5] = [candidates[i].file];
         } else {
-          doublicates[candidates[i].md5].push(candidates[i].file);
+          dublicates[candidates[i].md5].push(candidates[i].file);
         }
       }
-      return doublicates;
+      return dublicates;
     }
     
-    return await filterDouplicates(md5s);
+    return await filterDuplicates(md5s);
   }
 }
