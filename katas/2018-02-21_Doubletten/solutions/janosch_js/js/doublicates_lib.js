@@ -83,7 +83,21 @@ class Duplicate {
       }
       return Promise.all(fileReaders);
     }
-  
-    return await createMd5FromFiles();
+    
+    const md5s = await createMd5FromFiles();
+    
+    function filterDouplicates(candidates) {
+      const doublicates = {};
+      for (let i=0; i < candidates.length; i++){
+        if(!doublicates[candidates[i].md5]){
+          doublicates[candidates[i].md5] = [candidates[i].file];
+        } else {
+          doublicates[candidates[i].md5].push(candidates[i].file);
+        }
+      }
+      return doublicates;
+    }
+    
+    return await filterDouplicates(md5s);
   }
 }
