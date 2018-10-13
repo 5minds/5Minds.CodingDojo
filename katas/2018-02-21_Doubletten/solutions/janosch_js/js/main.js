@@ -7,14 +7,19 @@ document.getElementById("filepicker").addEventListener("change", function(event)
   sel_doublicate.options.length = 0;
   sel_doublicate.innerHTML = "";
   
-  console.log(doublicate.getCandidates(mod));
   const candidates = doublicate.getCandidates(mod);
   candidates.forEach((candidate, index) => {
     sel_doublicate.options[sel_doublicate.options.length] = new Option(candidate.name, index);
   });
   
   sel_doublicate.addEventListener("change", function () {
-    console.log(candidates[sel_doublicate.options[sel_doublicate.selectedIndex].value]);
+    checkDouplicate();
+    async function checkDouplicate() {
+      await doublicate.checkCandidate(candidates[sel_doublicate.options[sel_doublicate.selectedIndex].value]).then(res => {
+        console.log(res)
+      });
+    }
+    //console.log(doublicate.checkCandidate(candidates[sel_doublicate.options[sel_doublicate.selectedIndex].value]));
   }, false);
   
   document.getElementById("filepicker").value = '';

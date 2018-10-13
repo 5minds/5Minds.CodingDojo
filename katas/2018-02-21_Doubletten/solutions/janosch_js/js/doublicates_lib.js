@@ -60,4 +60,30 @@ class Duplicate {
     return candidates;
     
   }
+  
+  async checkCandidate(candidate){
+    function createMd5FromFiles() {
+      const fileReaders = [];
+      for (let i = 0; i < candidate.files.length; ++i) {
+        const file = candidate.files[i];
+        fileReaders.push(new Promise(function (resolve, reject) {
+          const fileReader = new FileReader;
+          fileReader.onload = () => {
+            const hash = CryptoJS.MD5(CryptoJS.enc.Latin1.parse(fileReader.result));
+            const md5 = hash.toString(CryptoJS.enc.Hex);
+            const md5file = {
+              file: candidate.files[i],
+              md5: md5
+            };
+            resolve(md5file);
+          };
+      
+          fileReader.readAsBinaryString(file);
+        }))
+      }
+      return Promise.all(fileReaders);
+    }
+  
+    return await createMd5FromFiles();
+  }
 }
