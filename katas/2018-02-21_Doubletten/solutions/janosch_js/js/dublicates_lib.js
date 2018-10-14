@@ -7,7 +7,7 @@ class Duplicate {
   //filtering the candidates from the filelist. By default candidates will be filtered by name and size, if the mod parameter is provided with 'name', candidates will be filtered only by name
   getCandidates(mod = 'name+size'){
     
-    let candidates = [];
+    const candidates = [];
     //create an array with only filenames
     const fileNameArray = Array.from(this.fileList).map(file => file.name);
     
@@ -32,6 +32,7 @@ class Duplicate {
       });
     }
     
+    //check dandidates by name and size
     if (mod === "name+size"){
       let newCandidates = [];
       candidates.forEach(can => {
@@ -60,7 +61,9 @@ class Duplicate {
     
   }
   
+  //check candidates by md5
   async checkCandidate(candidate){
+    //create the md5 value for all candidates as promises
     function createMd5FromFiles() {
       const fileReaders = [];
       for (let i = 0; i < candidate.files.length; ++i) {
@@ -80,11 +83,13 @@ class Duplicate {
           fileReader.readAsBinaryString(file);
         }))
       }
+      //return when all promises are resolved
       return Promise.all(fileReaders);
     }
     
     const md5s = await createMd5FromFiles();
     
+    //create the return value as a json with the md5 as key and all files with that md5 in an array as value
     function filterDuplicates(candidates) {
       const dublicates = {};
       for (let i=0; i < candidates.length; i++){
@@ -96,6 +101,7 @@ class Duplicate {
       }
       return dublicates;
     }
+    //return the generated json
     return await filterDuplicates(md5s);
   }
 }
