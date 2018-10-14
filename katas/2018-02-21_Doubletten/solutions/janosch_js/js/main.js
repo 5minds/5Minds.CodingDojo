@@ -1,7 +1,7 @@
 const candidates = [];
 const dublicate = {};
 
-document.getElementById("filepicker").addEventListener("change", function(event) {
+document.getElementById("filepicker").addEventListener("change", (event) => {
   clear();
   window.dublicate = new Duplicate(event.target.files);
   const sel_mod = document.getElementById("sel_mod");
@@ -16,6 +16,8 @@ document.getElementById("filepicker").addEventListener("change", function(event)
     sel_dublicate.options[sel_dublicate.options.length] = new Option(candidate.name, index);
   });
   
+  const btn_check = document.getElementById("btn_check");
+  btn_check.disabled = false;
   document.getElementById("filepicker").value = '';
 }, false);
 
@@ -27,8 +29,10 @@ function clear(){
 function checkCandidates() {
   const sel_dublicate = document.getElementById("sel_dublicate");
   const candidates = window.candidates;
+  
   clear();
   checkDuplicate();
+  
   async function checkDuplicate() {
     console.log(candidates[sel_dublicate.options[sel_dublicate.selectedIndex].value]);
     await window.dublicate.checkCandidate(candidates[sel_dublicate.options[sel_dublicate.selectedIndex].value]).then(res => {
