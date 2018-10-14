@@ -56,7 +56,6 @@ class Duplicate {
       });
       return newCandidates;
     }
-    
     return candidates;
     
   }
@@ -97,7 +96,6 @@ class Duplicate {
       }
       return dublicates;
     }
-    
     return await filterDuplicates(md5s);
   }
 }
