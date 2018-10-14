@@ -57,6 +57,11 @@ function checkCandidates() {
   }
 }
 
+document.getElementById("sel_mod").addEventListener("change", (event) => {
+  clear();
+  document.getElementById("btn_check").disabled = true;
+});
+
 function clear(){
   const ul_coublicate = document.getElementById("ul_dublicate");
   ul_coublicate.innerHTML = "";
