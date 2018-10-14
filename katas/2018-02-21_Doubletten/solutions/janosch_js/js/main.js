@@ -31,7 +31,12 @@ function checkCandidates() {
   const candidates = window.candidates;
   
   clear();
-  checkDuplicate();
+  
+  if (!sel_dublicate.options[sel_dublicate.selectedIndex]){
+    alert("No doublicates identified at this folder, please chose another folder.");
+  } else {
+    checkDuplicate();
+  }
   
   async function checkDuplicate() {
     console.log(candidates[sel_dublicate.options[sel_dublicate.selectedIndex].value]);
