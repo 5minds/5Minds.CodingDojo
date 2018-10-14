@@ -12,7 +12,7 @@ class Duplicate {
     const fileNameArray = Array.from(this.fileList).map(file => file.name);
     
     //generate an object for each dublicated filename and their index in the array
-    let canObj = {};
+    const canObj = {};
     for (let i = 0; i < fileNameArray.length; i++) {
       if(canObj.hasOwnProperty(fileNameArray[i])) {
         canObj[fileNameArray[i]].push(i);
@@ -22,7 +22,7 @@ class Duplicate {
     }
     //create an object for better readability
     for (let key in canObj) {
-      let files = [];
+      const files = [];
       canObj[key].forEach(pos => {
         files.push(this.fileList[pos]);
       });
@@ -34,7 +34,7 @@ class Duplicate {
     
     //check dandidates by name and size
     if (mod === "name+size"){
-      let newCandidates = [];
+      const newCandidates = [];
       candidates.forEach(can => {
         //get all size values
         const sizes = Array.from(can["files"]).map(file => file.size);
