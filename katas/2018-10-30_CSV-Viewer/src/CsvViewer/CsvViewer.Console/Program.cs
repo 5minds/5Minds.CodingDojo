@@ -16,8 +16,39 @@ namespace CsvViewer
 
             var rawLines = File.ReadAllLines(parameter.filePath);
 
-            var presenter = new CsvPresenter();
-            presenter.Print(rawLines, parameter.pageLen);
+            var presenter = new CsvPresenter(rawLines, parameter.pageLen);
+
+            while (true)
+            {
+                presenter.DisplayCurrentPage();
+
+                Console.Write("F(irst, L(ast, N(ext, P(rev, eX(it: ");
+
+                var cmd = char.ToLower(Console.ReadKey().KeyChar);
+                Console.WriteLine("\n");
+
+                switch (cmd)
+                {
+                    case 'x':
+                        return;
+
+                    case 'f':
+                        presenter.SelectPageLinesForFirstPage();
+                        break;
+
+                    case 'l':
+                        presenter.SelectPageLinesForLastPage();
+                        break;
+
+                    case 'n':
+                        presenter.SelectPageLinesForNextPage();
+                        break;
+
+                    case 'p':
+                        presenter.SelectPageLinesForPreviousPage();
+                        break;
+                }
+            }
         }
 
         public static (string filePath, int pageLen) ParseArguments(string[] args)

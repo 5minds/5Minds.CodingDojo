@@ -8,78 +8,98 @@ namespace CsvViewer
     public class CsvPresenter
     {
         private IEnumerable<string> pageLines;
-        private int iFirstLineOfLastPage;
+        private int FirstLineOfLastPage;
+        string[] rawLines;
+        int pageLen;
 
-        public CsvPresenter()
+        public CsvPresenter(string[] rawLines, int pageLen)
         {
+            this.rawLines = rawLines;
+            this.pageLen = pageLen;
 
-
+            SelectPageLinesForFirstPage();
         }
 
-        public void Print(string[] rawLines, int pageLen)
+        public void DisplayCurrentPage()
+        {
+            var dataLines = this.GetRecordFromPageLines();
+
+            var colWidths = this.CalculateColumnWidths(dataLines);
+
+            var headline = CreateDisplayLineForRecord(dataLines.First(), colWidths);
+
+            var underline = this.GetUnderline(colWidths);
+
+            var displayLines = new[] { headline, underline }.Concat(dataLines.Where((r, i) => i > 0).Select(r => CreateDisplayLineForRecord(r, colWidths)));
+
+            Console.WriteLine(string.Join("\n", displayLines));
+        }
+
+        private IEnumerable<string[]> GetRecordFromPageLines()
+        {
+            return pageLines.Select(l => ConvertLineToRecordFields(l, ","));
+        }
+
+        private int[] CalculateColumnWidths(IEnumerable<string[]> records)
+        {
+            return Enumerable.Range(0, records.First().Count())
+                                                  .Select(i => records.Select(r => r[i].Length).Max())
+                                                  .ToArray();
+        }
+
+        private string GetUnderline(int[] colWidths)
+        {
+            var underlineRecord = Enumerable.Range(0, colWidths.Length).Select(i => new string('-', colWidths[i]));
+            var underline = string.Join("+", underlineRecord);
+
+            return underline;
+        }
+
+        public void SelectPageLinesForFirstPage()
         {
             pageLines = rawLines.Take(pageLen + 1);
-            iFirstLineOfLastPage = 1;
+            FirstLineOfLastPage = 1;
+        }
 
-            while (true)
+        public void SelectPageLinesForLastPage()
+        {
+            FirstLineOfLastPage = rawLines.Length - (rawLines.Length - 1) % pageLen;
+            pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= FirstLineOfLastPage));
+        }
+
+        public void SelectPageLinesForNextPage()
+        {
+            FirstLineOfLastPage += pageLen;
+            if (FirstLineOfLastPage >= rawLines.Length)
             {
-                var records = pageLines.Select(l => Convert_line_to_record_fields(l, ","));
-
-                var colWidths = Enumerable.Range(0, records.First().Count())
-                                          .Select(i => records.Select(r => r[i].Length).Max())
-                                          .ToArray();
-                var headline = Create_disply_line_for_record(records.First(), colWidths);
-
-                var underlineRecord = Enumerable.Range(0, colWidths.Length).Select(i => new string('-', colWidths[i]));
-                var underline = string.Join("+", underlineRecord);
-
-                var displayLines = new[] { headline, underline }.Concat(records.Where((r, i) => i > 0).Select(r => Create_disply_line_for_record(r, colWidths)));
-                Console.WriteLine(string.Join("\n", displayLines));
-
-                Console.Write("F(irst, L(ast, N(ext, P(rev, eX(it: ");
-                var cmd = char.ToLower(Console.ReadKey().KeyChar);
-                Console.WriteLine("\n");
-
-                switch (cmd)
-                {
-                    case 'x':
-                        return;
-
-                    case 'f':
-                        pageLines = rawLines.Take(pageLen + 1);
-                        iFirstLineOfLastPage = 1;
-                        break;
-
-                    case 'l':
-                        iFirstLineOfLastPage = rawLines.Length - (rawLines.Length - 1) % pageLen;
-                        pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= iFirstLineOfLastPage));
-                        break;
-
-                    case 'n':
-                        iFirstLineOfLastPage += pageLen;
-                        if (iFirstLineOfLastPage >= rawLines.Length)
-                            iFirstLineOfLastPage = rawLines.Length - (rawLines.Length - 1) % pageLen;
-                        pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= iFirstLineOfLastPage && i < (iFirstLineOfLastPage + pageLen)));
-                        break;
-
-                    case 'p':
-                        iFirstLineOfLastPage -= pageLen;
-                        if (iFirstLineOfLastPage < 1)
-                            iFirstLineOfLastPage = 1;
-                        pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= iFirstLineOfLastPage && i < (iFirstLineOfLastPage + pageLen)));
-                        break;
-                }
+                FirstLineOfLastPage = rawLines.Length - (rawLines.Length - 1) % pageLen;
             }
+
+            pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= FirstLineOfLastPage && i < (FirstLineOfLastPage + pageLen)));
         }
 
-        private static string[] Convert_line_to_record_fields(string line, string delimiter)
+        public void SelectPageLinesForPreviousPage()
         {
-            return Convert_line_to_record_fields(line, delimiter, new List<string>()).ToArray();
+            FirstLineOfLastPage -= pageLen;
+            if (FirstLineOfLastPage < 1)
+            {
+                FirstLineOfLastPage = 1;
+            }
+
+            pageLines = new[] { rawLines[0] }.Concat(rawLines.Where((l, i) => i > 0 && i >= FirstLineOfLastPage && i < (FirstLineOfLastPage + pageLen)));
         }
 
-        private static List<string> Convert_line_to_record_fields(string line, string delimiter, List<string> fields)
+        private static string[] ConvertLineToRecordFields(string line, string delimiter)
         {
-            if (line == "") return fields;
+            return ConvertLineToRecordFields(line, delimiter, new List<string>()).ToArray();
+        }
+
+        private static List<string> ConvertLineToRecordFields(string line, string delimiter, List<string> fields)
+        {
+            if (line == "")
+            {
+                return fields;
+            }
 
             if (line.StartsWith("\""))
             {
@@ -109,11 +129,11 @@ namespace CsvViewer
                 }
             }
 
-            return Convert_line_to_record_fields(line, delimiter, fields);
+            return ConvertLineToRecordFields(line, delimiter, fields);
         }
 
 
-        private static string Create_disply_line_for_record(string[] recordFields, int[] colWidths)
+        private static string CreateDisplayLineForRecord(string[] recordFields, int[] colWidths)
         {
             return string.Join("|", recordFields.Select((f, i) => f.PadRight(colWidths[i])));
         }
