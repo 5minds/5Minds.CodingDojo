@@ -9,13 +9,13 @@ export class BerlinClockService {
   constructor() { }
 
   GetBerlinClockData(currentTime: Date): BerlinClockData {
-    let hours = currentTime.getHours();
-    let hoursModFive = hours % 5;
-    let minutes = currentTime.getMinutes();
-    let minutesModFive = minutes % 5;
-    let seconds = currentTime.getSeconds();
+    const hours = currentTime.getHours();
+    const hoursModFive = hours % 5;
+    const minutes = currentTime.getMinutes();
+    const minutesModFive = minutes % 5;
+    const seconds = currentTime.getSeconds();
 
-    let berlinClockData = new BerlinClockData();
+    const berlinClockData = new BerlinClockData();
     berlinClockData.isFiveHourLightOneOn = hours > 4;
     berlinClockData.isFiveHourLightTwoOn = hours > 9;
     berlinClockData.isFiveHourLightThreeOn = hours > 14;
