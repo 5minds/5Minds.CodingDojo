@@ -14,7 +14,7 @@ export class BerlinClockData {
     readonly isFiveMinuteLightFiveOn: boolean;
     readonly isFiveMinuteLightSixOn: boolean;
     readonly isFiveMinuteLightSevenOn: boolean;
-    readonly isFiveMinuteLightHeightOn: boolean;
+    readonly isFiveMinuteLightEightOn: boolean;
     readonly isFiveMinuteLightNineOn: boolean;
     readonly isFiveMinuteLightTenOn: boolean;
     readonly isFiveMinuteLightElevenOn: boolean;
@@ -47,7 +47,7 @@ export class BerlinClockData {
         this.isFiveMinuteLightFiveOn = minutes > 24;
         this.isFiveMinuteLightSixOn = minutes > 29;
         this.isFiveMinuteLightSevenOn = minutes > 34;
-        this.isFiveMinuteLightHeightOn = minutes > 39;
+        this.isFiveMinuteLightEightOn = minutes > 39;
         this.isFiveMinuteLightNineOn = minutes > 44;
         this.isFiveMinuteLightTenOn = minutes > 49;
         this.isFiveMinuteLightElevenOn = minutes > 54;
