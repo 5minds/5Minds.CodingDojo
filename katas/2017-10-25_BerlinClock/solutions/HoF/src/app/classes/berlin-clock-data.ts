@@ -24,14 +24,13 @@ export class BerlinClockData {
     readonly isMinuteLightFourOn: boolean;
     readonly isSecondLightOn: boolean;
 
-    constructor (time: Date)
-    {
+    constructor(time: Date) {
         const hours = time.getHours();
         const hoursModFive = hours % 5;
         const minutes = time.getMinutes();
         const minutesModFive = minutes % 5;
         const seconds = time.getSeconds();
-    
+
         this.isFiveHourLightOneOn = hours > 4;
         this.isFiveHourLightTwoOn = hours > 9;
         this.isFiveHourLightThreeOn = hours > 14;
