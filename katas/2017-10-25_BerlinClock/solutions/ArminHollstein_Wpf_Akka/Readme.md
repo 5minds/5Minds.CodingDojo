@@ -76,13 +76,13 @@ Als visuellen Test kann die Taktung der Serviceabfrage über den Schieberegler a
 # Monitoring
 Man kann das Monitoring über die App.config  
 anschalten:  
-    <applicationSettings>  
-        <BerlinClockWpfApp.Properties.Settings>  
-            <setting name="Monitoring" serializeAs="String">  
-                <value>False</value>  
-            </setting>  
-        </BerlinClockWpfApp.Properties.Settings>  
-    </applicationSettings>  
+>    \<applicationSettings>  
+>        \<BerlinClockWpfApp.Properties.Settings>  
+>            \<setting name="Monitoring" serializeAs="String">  
+>                \<value>False</value>  
+>            \</setting>  
+>        \</BerlinClockWpfApp.Properties.Settings>  
+>    \</applicationSettings>  
 
 Initilisiert wird das Monitoring in ActoModel\ActorSystemReference.  
 Instrumenalisiert über eine neue Basis-Klasse ActorModel\MonitoringReceiveActor.cs.  
