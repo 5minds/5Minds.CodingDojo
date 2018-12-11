@@ -73,7 +73,24 @@ Die Bridge-Aktoren werden angemeldet und es wird z.Zt. für 2 Testdatensätze di
 
 Als visuellen Test kann die Taktung der Serviceabfrage über den Schieberegler am oberen Rand des Fensters erhöhen.
 
+# Monitoring
+Man kann das Monitoring über die App.config  
+anschalten:  
+    <applicationSettings>  
+        <BerlinClockWpfApp.Properties.Settings>  
+            <setting name="Monitoring" serializeAs="String">  
+                <value>False</value>  
+            </setting>  
+        </BerlinClockWpfApp.Properties.Settings>  
+    </applicationSettings>  
 
+Initilisiert wird das Monitoring in ActoModel\ActorSystemReference.  
+Instrumenalisiert über eine neue Basis-Klasse ActorModel\MonitoringReceiveActor.cs.  
+Alle Klassen die bisher von ReceiveActor abgeleitet haben leiten jetzt von MonitoringReceiveActor ab.  
+Das Monitoring richtet PerformanceCounter für die einzelnen Aktoren ein welche über PerfMon abgefragt werden können.  
+(Kategorie Akka). Beim ersten start muss das Studio, oder die Exe mit Administratorenrechten gestartet werden, da die  
+PerformanceCounter eingerichtet werden. Allerdings sehen die Werte wenig spektakulär aus, da hatte ich was anderes erwartet.  
+Evtl. funktioniert das Monitoring noch nicht Richtg, weiss aber noch nicht warum.  
 
 # Links
 [AKKA.Net Dokumenation](http://getakka.net/articles/actors/testing-actor-systems.html)
@@ -83,6 +100,8 @@ Als visuellen Test kann die Taktung der Serviceabfrage über den Schieberegler a
 * Akka.DI.AutFac
 * Akka.DI.Core
 * Akka.TestKit
+* Akka.Monitoring
+* Akka.Monitoring.PerformanceCounter
 * AutoFac
 * Xunit
 * Xunit.runner.visualstudio
