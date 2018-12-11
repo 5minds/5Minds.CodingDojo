@@ -20,7 +20,11 @@ namespace BerlinClockWpfApp.ActorModel
         static ActorSystemReference()
         {
             ActorSystem = ActorSystem.Create("BerlinClockActorSystem");
-            var registeredMonitor = ActorMonitoringExtension.RegisterMonitor(ActorSystem, new ActorPerformanceCountersMonitor());
+
+            if (Properties.Settings.Default.Monitoring)
+            {
+                ActorMonitoringExtension.RegisterMonitor(ActorSystem, new ActorPerformanceCountersMonitor());
+            }
 
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterType<TickerService>().As<ITickerService>();
