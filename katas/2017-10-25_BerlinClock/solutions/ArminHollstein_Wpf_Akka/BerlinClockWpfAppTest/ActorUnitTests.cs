@@ -57,7 +57,6 @@ namespace BerlinClockWpfAppTest
             //Arrange
             DateTime tick = new DateTime(2018, 11, 30, 22, minutes, 0);
             toggle = null;
-            int Basis = 5;
 
             // var subject = Sys.ActorOf(Props.Create(() => new MinutesActor(minuteUISlot, (Action)ToggleOn, (Action)ToggleOff)));
             var subject = ActorOfAsTestActorRef<MinutesActor>(Props.Create(() => new MinutesActor(minuteUISlot, (Action)ToggleOn, (Action)ToggleOff)));
@@ -87,7 +86,6 @@ namespace BerlinClockWpfAppTest
             //Arrange
             DateTime tick = new DateTime(2018, 11, 30, hours, 0, 0);
             toggle = null;
-            int Basis = 5;
 
             // var subject = Sys.ActorOf(Props.Create(() => new MinutesActor(minuteUISlot, (Action)ToggleOn, (Action)ToggleOff)));
             var subject = ActorOfAsTestActorRef<HoursActor>(Props.Create(() => new HoursActor(hourUISlot, (Action)ToggleOn, (Action)ToggleOff)));

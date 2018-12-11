@@ -1,5 +1,10 @@
-﻿namespace BerlinClockWpfApp.ActorModel
+﻿using Akka.Monitoring.PerformanceCounters;
+
+namespace BerlinClockWpfApp.ActorModel
 {
+    using Akka;
+    using Akka.Monitoring;
+    using Akka.Monitoring.StatsD;
     using Akka.Actor;
     using Akka.DI.Core;
 
@@ -15,6 +20,7 @@
         static ActorSystemReference()
         {
             ActorSystem = ActorSystem.Create("BerlinClockActorSystem");
+            var registeredMonitor = ActorMonitoringExtension.RegisterMonitor(ActorSystem, new ActorPerformanceCountersMonitor());
 
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterType<TickerService>().As<ITickerService>();

@@ -9,7 +9,7 @@
         public HoursActor(int hourUISlot, Action toggleOn, Action toggleOff)
             : base(basis: 5, hourUISlot: hourUISlot, minuteUISlot: 0)
         {
-            Receive<Messages.TickerMessage>(
+            ReceiveAndMonitor<Messages.TickerMessage>(
                 message =>
                 {
                     if (IsHourRow(message.Hours) || Is5HourRow(message.Hours))

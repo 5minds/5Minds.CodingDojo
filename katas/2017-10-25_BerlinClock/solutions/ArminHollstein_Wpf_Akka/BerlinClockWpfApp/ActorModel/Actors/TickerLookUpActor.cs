@@ -7,7 +7,7 @@
     using BerlinClockWpfApp.ActorModel.Messages;
     using BerlinClockWpfApp.Services;
 
-    public class TickerLookUpActor : ReceiveActor
+    public class TickerLookUpActor : MonitoringReceiveActor
     {
         #region Fields
 
@@ -20,7 +20,7 @@
         public TickerLookUpActor(ITickerService tickerService)
         {
             _tickerService = tickerService;
-            Receive<RefreshTickerMessage>(message => LookupTicker());
+            ReceiveAndMonitor<RefreshTickerMessage>(message => LookupTicker());
         }
 
         #endregion

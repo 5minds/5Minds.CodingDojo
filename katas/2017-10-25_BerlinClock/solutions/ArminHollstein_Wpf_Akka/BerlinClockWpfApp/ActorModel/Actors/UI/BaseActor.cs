@@ -4,7 +4,7 @@
 
     using BerlinClockWpfApp.ActorModel.Messages;
 
-    public class BaseActor : ReceiveActor
+    public class BaseActor : MonitoringReceiveActor
     {
         #region Fields
 

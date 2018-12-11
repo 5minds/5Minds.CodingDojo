@@ -1,4 +1,6 @@
-﻿namespace BerlinClockWpfApp.ActorModel.Actors
+﻿using Akka.Monitoring;
+
+namespace BerlinClockWpfApp.ActorModel.Actors
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +10,7 @@
 
     using BerlinClockWpfApp.ActorModel.Messages;
 
-    public class PublishingTickerActor : ReceiveActor
+    public class PublishingTickerActor : MonitoringReceiveActor
     {
         #region Fields
 
@@ -34,12 +36,13 @@
             _tickerLookupChild = Context.ActorOf(Context.DI().Props<TickerLookUpActor>());
             this._autostart = autostart;
             _timeLapse = 0;
+            
+            
+            ReceiveAndMonitor<SubscribeToTickerMessage>(message => _subscribers.Add(message.Subscriber));
 
-            Receive<SubscribeToTickerMessage>(message => _subscribers.Add(message.Subscriber));
+            ReceiveAndMonitor<UnsubscribeFromTickerMessage>(message => _subscribers.Remove(message.Subscriber));
 
-            Receive<UnsubscribeFromTickerMessage>(message => _subscribers.Remove(message.Subscriber));
-
-            Receive<RefreshTickerMessage>(
+            ReceiveAndMonitor<RefreshTickerMessage>(
                 message =>
                 {
                     if (message.TimeLapse.HasValue)
@@ -54,7 +57,7 @@
                     }
                 });
 
-            Receive<UpdateTickerMessage>(
+            ReceiveAndMonitor<UpdateTickerMessage>(
                 message =>
                 {
                     _tick = message.Tick;
@@ -83,6 +86,7 @@
         {
             if (_autostart)
             {
+                base.PreStart();
                 SchedulePublishingTickerActor();
             }
         }

@@ -4,13 +4,13 @@
 
     using Akka.Actor;
 
-    public class SecondsActor : ReceiveActor
+    public class SecondsActor : MonitoringReceiveActor
     {
         #region Constructors and Destructors
 
         public SecondsActor(Action toggleOn, Action toggleOff)
         {
-            Receive<Messages.TickerMessage>(
+            ReceiveAndMonitor<Messages.TickerMessage>(
                 message =>
                 {
                     if (message.SecondToggle == 0)
