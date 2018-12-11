@@ -8,26 +8,41 @@ namespace BerlinClockWpfApp.ActorModel.Actors
     {
         protected void ReceiveAndMonitor<T>(Func<T, bool> handler)
         {
-            Context.IncrementMessagesReceived(1, 1);
-            Context.IncrementCounter( typeof(T).ToString());
+            if (Properties.Settings.Default.Monitoring)
+            {
+                Context.IncrementMessagesReceived(1, 1);
+            }
+            
             Receive(handler);
         }
 
         protected void ReceiveAndMonitor<T>(Action<T> handler, Predicate<T> shouldHandle = null)
         {
-            Context.IncrementMessagesReceived(1, 1);
+            if (Properties.Settings.Default.Monitoring)
+            {
+                Context.IncrementMessagesReceived(1, 1);
+            }
+
             Receive(handler, shouldHandle);
         }
 
         protected override void PreStart()
         {
-            Context.IncrementActorCreated(1, 1);
+            if (Properties.Settings.Default.Monitoring)
+            {
+                Context.IncrementActorCreated(1, 1);
+            }
+
             base.PreStart();
         }
 
         protected override void PostStop()
         {
-            Context.IncrementActorStopped(1, 1);
+            if (Properties.Settings.Default.Monitoring)
+            {
+                Context.IncrementActorStopped(1, 1);
+            }
+
             base.PostStop();
         }
     }
