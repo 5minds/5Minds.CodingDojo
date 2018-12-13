@@ -1,0 +1,4 @@
+﻿Die View fragt beim Identityserver einen Token zur Verifizierung bei der API an und Speichert diese um den Traffic auf dem IdentityServer zu reduzieren.
+Anschließend wird bei der API die aktuellen Zeitdaten abgefragt. Wenn die View angezeigt worden ist wird in einem sehr kleinen Abstand Anfragen zwischen Server und View Ausgetauscht um die Uhr so nah wie möglich an der Echtzeit zu aktualisieren.
+Dies wird über eine einfachen Ajax Call ausgeführt und anschließend mit der fabric.js-Library in ein Canvas gerendert.
+Für die Vermeidung von eventuellen Ressourcen Problemen, ist noch an der Verwendung des Arbeitsspeichers zu optimieren, z.B. durch das Leeren der LoggingConsole und Auslagern der geloggten Daten.

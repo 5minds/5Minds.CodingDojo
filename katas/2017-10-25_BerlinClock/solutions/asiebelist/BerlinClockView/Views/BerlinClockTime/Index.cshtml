@@ -1,0 +1,19 @@
+﻿@model BerlinClockView.Models.BerlinClockTime
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+@section Scripts{
+    <script type="text/javascript">
+        setInterval(callTimeUpdate, 100);
+    </script>
+}
+
+    <h1>Berliner Uhr</h1>
+    
+    <div id="CanvasContainer" width="440" height="400">
+        <canvas id="ClockCanvas" width="440" height="400" style="border:1px solid #c3c3c3;float:left;margin:20px"></canvas>
+    </div>
+
+
+

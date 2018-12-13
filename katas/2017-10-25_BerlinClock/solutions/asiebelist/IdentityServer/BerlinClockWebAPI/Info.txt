@@ -1,0 +1,2 @@
+﻿Die Webapi bietet über die Schnittstelle die Zeitdaten im BerlinClockFormat an.
+Für die Vermeidung von eventuellen Ressourcen Problemen, ist noch an der Verwendung des Arbeitsspeichers zu optimieren, z.B. durch das Leeren der LoggingConsole und Auslagern der geloggten Daten.

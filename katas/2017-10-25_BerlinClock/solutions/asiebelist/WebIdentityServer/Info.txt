@@ -1,0 +1,3 @@
+﻿Identity Server zur Sicherung der Schnittstelle mit einem Token, vor dem Zugriff von unbefugten.
+Für diese sehr kleine Anwendung reicht eine gecachte Client und Ressourcen Datei aus. Sollte dies vergrößert werden ist mit einem EntityFramework aud einem SQL-Server zu arbeiten.
+Für die Vermeidung von eventuellen Ressourcen Problemen, ist noch an der Verwendung des Arbeitsspeichers zu optimieren, z.B. durch das Leeren der LoggingConsole und Auslagern der geloggten Daten.

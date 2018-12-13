@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "fabric.js@2.4.5",
+      "destination": "wwwroot/fabric.js/"
+    },
+    {
+      "library": "jquery@3.3.1",
+      "destination": "wwwroot/jquery/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "js/",
+      "destination": "wwwroot/js/"
+    }
+  ]
+}

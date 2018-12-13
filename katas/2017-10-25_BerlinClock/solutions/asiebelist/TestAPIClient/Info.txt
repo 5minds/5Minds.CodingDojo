@@ -1,0 +1,2 @@
+﻿Dieser Client war nur zum Testen der Api-Schnittstelle und des IdentityServer da, bevor die View auf Schnittstelle und IdentityServer ergänzt wurden.
+Wird nicht zum ausführen benötigt.
