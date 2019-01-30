@@ -1,0 +1,86 @@
+<div class="berlin-clock-container" *ngIf="berlinClockData">
+  <div class="berlin-clock-row">
+    <div style="flex: 1 1"></div>
+    <div class="berlin-clock-second"
+         [class.berlin-clock-second-active]="berlinClockData.isSecondLightOn"
+         [class.berlin-clock-second-inactive]="!berlinClockData.isSecondLightOn"></div>
+    <div style="flex: 1 1"></div>
+  </div>
+  <div class="berlin-clock-row">
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isFiveHourLightOneOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isFiveHourLightOneOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isFiveHourLightTwoOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isFiveHourLightTwoOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isFiveHourLightThreeOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isFiveHourLightThreeOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isFiveHourLightFourOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isFiveHourLightFourOn"></div>
+  </div>
+  <div class="berlin-clock-row">
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isHourLightOneOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isHourLightOneOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isHourLightTwoOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isHourLightTwoOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isHourLightThreeOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isHourLightThreeOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-hour-active]="berlinClockData.isHourLightFourOn"
+         [class.berlin-clock-hour-inactive]="!berlinClockData.isHourLightFourOn"></div>
+  </div>
+  <div class="berlin-clock-row">
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightOneOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightOneOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightTwoOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightTwoOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-special-active]="berlinClockData.isFiveMinuteLightThreeOn"
+         [class.berlin-clock-minute-special-inactive]="!berlinClockData.isFiveMinuteLightThreeOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightFourOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightFourOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightFiveOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightFiveOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-special-active]="berlinClockData.isFiveMinuteLightSixOn"
+         [class.berlin-clock-minute-special-inactive]="!berlinClockData.isFiveMinuteLightSixOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightSevenOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightSevenOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightEightOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightEightOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-special-active]="berlinClockData.isFiveMinuteLightNineOn"
+         [class.berlin-clock-minute-special-inactive]="!berlinClockData.isFiveMinuteLightNineOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightTenOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightTenOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isFiveMinuteLightElevenOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isFiveMinuteLightElevenOn"></div>
+  </div>
+  <div class="berlin-clock-row">
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isMinuteLightOneOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isMinuteLightOneOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isMinuteLightTwoOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isMinuteLightTwoOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isMinuteLightThreeOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isMinuteLightThreeOn"></div>
+    <div class="berlin-clock-cell"
+         [class.berlin-clock-minute-active]="berlinClockData.isMinuteLightFourOn"
+         [class.berlin-clock-minute-inactive]="!berlinClockData.isMinuteLightFourOn"></div>
+  </div>
+</div>
