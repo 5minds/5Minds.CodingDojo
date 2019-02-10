@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doublicates</title>
+</head>
+<body>
+<label for="sel_mod">Please select the mod to identify doublicates</label>
+<br>
+<select id="sel_mod" name="sel_mod">
+  <option selected value="name+size">By name and size</option>
+  <option value="name">By name</option>
+</select>
+<br>
+<br>
+<label for="filepicker">Please chose a folder to identify doublicate files</label>
+<br>
+<input type="file" id="filepicker" name="filepicker" webkitdirectory directory />
+
+<br>
+<br>
+<label for="sel_dublicate">Please select the doublicate candidate to investigate by md5 hash</label>
+<br>
+<select id="sel_dublicate" name="sel_dublicate"></select>
+<button type="button" id="btn_check" onclick="checkCandidates()" disabled>Check</button>
+<br>
+<br>
+<h3>These files were identified as doublicates:</h3>
+<ul id="ul_dublicate">
+
+</ul>
+
+<script src="js/vendor/core-min.js"></script>
+<script src="js/vendor/md5-min.js"></script>
+<script src="js/dublicates_lib.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
