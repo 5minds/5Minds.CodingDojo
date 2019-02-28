@@ -1,0 +1,112 @@
+﻿<Window x:Class="BerlinClockWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BerlinClockWpfApp"
+        xmlns:ctrl="clr-namespace:BerlinClockWpfApp.View"
+        mc:Ignorable="d"
+        Title="BerlinClock" Height="450" Width="800">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="slider" Height="20" />
+            <RowDefinition x:Name="secondsRow" />
+            <RowDefinition x:Name="hour5Row" />
+            <RowDefinition x:Name="hour1Row" />
+            <RowDefinition x:Name="minute5Row" />
+            <RowDefinition x:Name="minute1Row" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="Slider">
+            <Slider Maximum="999" Minimum="0" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True"
+                    Name="timelapse" Value="{Binding Path=Timelapse}" />
+        </Grid>
+        <Grid x:Name="Ticker" Grid.Row="1">
+            <Ellipse Margin="354,0" Fill="{Binding Path=SecondsRow.SecondsBeacon.Toggle }" Stroke="Black" />
+        </Grid>
+
+        <Grid x:Name="FiveHourGrid" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ctrl:Box Background="{Binding Path=Hours5Row.Hour05Beacon.Toggle}" BorderBrush="Black" Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours5Row.Hour10Beacon.Toggle}" BorderBrush="Black" Grid.Column="1"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours5Row.Hour15Beacon.Toggle}" BorderBrush="Black" Grid.Column="2"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours5Row.Hour20Beacon.Toggle}" BorderBrush="Black" Grid.Column="3"
+                      Margin="10,10,10,10" />
+        </Grid>
+        <Grid x:Name="OneHourGrid" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ctrl:Box Background="{Binding Path=Hours1Row.Hour01Beacon.Toggle}" BorderBrush="Black" Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours1Row.Hour02Beacon.Toggle}" BorderBrush="Black" Grid.Column="1"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours1Row.Hour03Beacon.Toggle}" BorderBrush="Black" Grid.Column="2"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Hours1Row.Hour04Beacon.Toggle}" BorderBrush="Black" Grid.Column="3"
+                      Margin="10,10,10,10" />
+        </Grid>
+        <Grid x:Name="FiveMinutesGrid" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute05Beacon.Toggle}" BorderBrush="Black" Grid.Column="0"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute10Beacon.Toggle}" BorderBrush="Black" Grid.Column="1"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute15Beacon.Toggle}" BorderBrush="Black" Grid.Column="2"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute20Beacon.Toggle}" BorderBrush="Black" Grid.Column="3"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute25Beacon.Toggle}" BorderBrush="Black" Grid.Column="4"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute30Beacon.Toggle}" BorderBrush="Black" Grid.Column="5"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute35Beacon.Toggle}" BorderBrush="Black" Grid.Column="6"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute40Beacon.Toggle}" BorderBrush="Black" Grid.Column="7"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute45Beacon.Toggle}" BorderBrush="Black" Grid.Column="8"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute50Beacon.Toggle}" BorderBrush="Black" Grid.Column="9"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes5Row.Minute55Beacon.Toggle}" BorderBrush="Black" Grid.Column="10"
+                      Margin="10,10,10,10" />
+        </Grid>
+        <Grid x:Name="OneMinutesGrid" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ctrl:Box Background="{Binding Path=Minutes1Row.Minute01Beacon.Toggle}" BorderBrush="Black" Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes1Row.Minute02Beacon.Toggle}" BorderBrush="Black" Grid.Column="1"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes1Row.Minute03Beacon.Toggle}" BorderBrush="Black" Grid.Column="2"
+                      Margin="10,10,10,10" />
+            <ctrl:Box Background="{Binding Path=Minutes1Row.Minute04Beacon.Toggle}" BorderBrush="Black" Grid.Column="3"
+                      Margin="10,10,10,10" />
+        </Grid>
+    </Grid>
+</Window>
