@@ -1,0 +1,26 @@
+{
+  "name": "pta_solution",
+  "version": "0.1.0",
+  "description": "A Berlin clock server implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=pta_solution:* mocha test/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pta12345678/5Minds.CodingDojo.git"
+  },
+  "author": "pta",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/pta12345678/5Minds.CodingDojo/issues"
+  },
+  "homepage": "https://github.com/pta12345678/5Minds.CodingDojo#readme",
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "should": "^13.2.3"
+  }
+}
