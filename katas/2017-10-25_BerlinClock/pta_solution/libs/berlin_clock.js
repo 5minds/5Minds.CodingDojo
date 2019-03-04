@@ -1,7 +1,5 @@
 'use strict';
 
-const debug = require('debug')('pta_solution:berlin_clock');
-
 class BerlinClock {
 
   constructor(secondBlock, minuteBlock1, minuteBlock2, hourBlock1, hourBlock2) {
