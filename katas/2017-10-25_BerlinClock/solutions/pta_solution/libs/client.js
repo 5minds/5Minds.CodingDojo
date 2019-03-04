@@ -5,6 +5,11 @@ const chalk = require('chalk');
 
 const BerlinClock = require('./berlin_clock');
 
+// TODO: Check for chalk.level and see if color support is given.
+// If its not, we want to use different signs and make a visible change that way
+// It would be that we'd void the berlin clock requirements but it's more
+// useful to the people of berlin that way.
+
 // Potential Client options...
 const REPEAT = 4;
 const SEPARATOR = '-';
