@@ -19,7 +19,13 @@ class BerlinClock {
     const minuteBlock1 = Math.floor(time.getMinutes() / 5);
     const minuteBlock2 = time.getMinutes() - minuteBlock1 * 5;
 
-    return new BerlinClock(secondBlock, minuteBlock1, minuteBlock2, hourBlock1, hourBlock2);
+    return new BerlinClock(
+      secondBlock
+      , minuteBlock1
+      , minuteBlock2
+      , hourBlock1
+      , hourBlock2
+    );
   }
 
   // This function returns the raw datapoints to a client.
@@ -29,9 +35,15 @@ class BerlinClock {
   static raw(epoch) {
     const berlinClock = BerlinClock.fromEpoch(epoch);
 
-    const hourBlock1 = new Array(4).fill(false).fill(true, 0, berlinClock.hourBlock1);
-    const hourBlock2 = new Array(4).fill(false).fill(true, 0, berlinClock.hourBlock2);
-    const minuteBlock2 = new Array(4).fill(false).fill(true, 0, berlinClock.minuteBlock2);
+    const hourBlock1 = new Array(4)
+      .fill(false)
+      .fill(true, 0, berlinClock.hourBlock1);
+    const hourBlock2 = new Array(4)
+      .fill(false)
+      .fill(true, 0, berlinClock.hourBlock2);
+    const minuteBlock2 = new Array(4)
+      .fill(false)
+      .fill(true, 0, berlinClock.minuteBlock2);
 
     // apparently, every third minute indicator is different...
     const first = new Array(berlinClock.minuteBlock1).fill(true)

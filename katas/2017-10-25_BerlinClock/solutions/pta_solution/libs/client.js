@@ -8,9 +8,7 @@ const BerlinClock = require('./berlin_clock');
 const REPEAT = 4;
 const SEPARATOR = '-';
 const SIGN = '#';
-
-// client sends data to the "service" so its possible to bypass timezone shenanigans
-const raw = BerlinClock.raw(Date.now());
+const INTERVAL = 100;
 
 function drawSingle(row, size, times) {
 
@@ -52,7 +50,8 @@ function separator(separator, times) {
   console.log(SEPARATOR.repeat(times));
 }
 
-function drawAll() {
+function drawAll(raw) {
+  console.clear();
   drawSingle(raw[0], 10, REPEAT);
   separator(SEPARATOR, 43);
   drawBigElement(raw[1], 10, REPEAT);
@@ -64,4 +63,13 @@ function drawAll() {
   drawBigElement(raw[4], 10, REPEAT);
 }
 
-drawAll();
+function whatsTheTime() {
+  // client sends data to the "service" so its possible
+  // to bypass timezone shenanigans
+  const raw = BerlinClock.raw(Date.now());
+  drawAll(raw);
+}
+
+setInterval(() => {
+  whatsTheTime();
+}, INTERVAL);
