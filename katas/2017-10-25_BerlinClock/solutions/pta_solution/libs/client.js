@@ -28,10 +28,10 @@ function drawSingle(row, size, times) {
   }
 }
 
-function drawBigElement(row, size, times) {
+function drawBigElement(row, activeColor, size, times) {
   const line = row.map((isActive) => {
     const colorWrapper = isActive === true
-      ? chalk.yellow
+      ? activeColor
       : isActive === false
         ? chalk.gray
         : chalk.red;
@@ -42,7 +42,7 @@ function drawBigElement(row, size, times) {
 
   console.log(line);
   if (times > 1) {
-    drawBigElement(row, size, times - 1);
+    drawBigElement(row, activeColor, size, times - 1);
   }
 }
 
@@ -54,13 +54,13 @@ function drawAll(raw) {
   console.clear();
   drawSingle(raw[0], 10, REPEAT);
   separator(SEPARATOR, 43);
-  drawBigElement(raw[1], 10, REPEAT);
+  drawBigElement(raw[1], chalk.red, 10, REPEAT);
   separator(SEPARATOR, 43);
-  drawBigElement(raw[2], 10, REPEAT);
+  drawBigElement(raw[2], chalk.red, 10, REPEAT);
   separator(SEPARATOR, 43);
-  drawBigElement(raw[3], 3, REPEAT);
+  drawBigElement(raw[3], chalk.yellow, 3, REPEAT);
   separator(SEPARATOR, 43);
-  drawBigElement(raw[4], 10, REPEAT);
+  drawBigElement(raw[4], chalk.yellow, 10, REPEAT);
 }
 
 function whatsTheTime() {
