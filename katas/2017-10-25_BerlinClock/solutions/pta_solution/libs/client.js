@@ -5,6 +5,7 @@ const chalk = require('chalk');
 
 const BerlinClock = require('./berlin_clock');
 
+// Potential Client options...
 const REPEAT = 4;
 const SEPARATOR = '-';
 const SIGN = '#';
