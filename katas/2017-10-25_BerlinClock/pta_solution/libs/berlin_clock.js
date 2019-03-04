@@ -24,6 +24,20 @@ class BerlinClock {
     return new BerlinClock(secondBlock, minuteBlock1, minuteBlock2, hourBlock1, hourBlock2);
   }
 
+  static raw(epoch) {
+    const berlinClock = BerlinClock.fromEpoch(epoch);
+
+    const raw = [
+      [!berlinClock.secondBlock],
+      [true, true, true, false],
+      [true, true, true, false],
+      [true, true, null, true, true, null, true, true, null, true, true],
+      [true, true, true, true],
+    ];
+
+    return raw;
+  }
+
 }
 
 module.exports = BerlinClock;
