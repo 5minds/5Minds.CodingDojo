@@ -11,7 +11,6 @@ const SIGN = '#';
 
 // client sends data to the "service" so its possible to bypass timezone shenanigans
 const raw = BerlinClock.raw(Date.now());
-console.log(raw);
 
 function drawSingle(row, size, times) {
 
