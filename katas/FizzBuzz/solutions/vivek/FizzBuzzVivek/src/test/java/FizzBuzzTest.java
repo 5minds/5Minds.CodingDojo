@@ -53,7 +53,7 @@ public class FizzBuzzTest {
         //Check at position 23 it is FizzBuzz.
         Assert.assertEquals(Constants.FIZZBUZZ, fizzBuzzList.get(22));
 
-        //Check at position 33 it is FizzBuzz.
+        //Check at position 33 it is Buzz.
         Assert.assertEquals(Constants.BUZZ, fizzBuzzList.get(32));
 
         //Check at position 32 it is FizzBuzz

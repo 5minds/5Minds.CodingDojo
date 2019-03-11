@@ -29,7 +29,7 @@ public class FizzBuzzMain {
         //Check fizz or buzz or fizzbuzz in FizzBuzzAlgo class
         List<String> numbersTilMaxRange = fizzBuzzAlgo.returnNumbersInFizzBuzz();
 
-        //Print out numbers til max range with fizz or buzz or fizzbuzz
+        //Print out numbers with fizz or buzz or fizzbuzz
         System.out.println(numbersTilMaxRange);
     }
 }
