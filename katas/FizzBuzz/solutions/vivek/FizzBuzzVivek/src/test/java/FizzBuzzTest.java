@@ -64,7 +64,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void check() {
+    public void compareStaticListWithAlgoGeneratedFizzBuzzList() {
         FizzBuzzInterface fizzBuzzAlgo = new FizzBuzzAlgo(10, 2, 3);
         List<String> fizzBuzzList = fizzBuzzAlgo.returnNumbersInFizzBuzz();
         List<String> expectedList = Arrays.asList("1", "Fizz", "Buzz", "Fizz", "5", "FizzBuzz", "7", "Fizz", "Buzz", "Fizz");
