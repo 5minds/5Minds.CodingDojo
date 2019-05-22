@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NextBiggerNumber": {
+      "commandName": "Project",
+      "commandLineArgs": "12346666852"
+    }
+  }
+}
