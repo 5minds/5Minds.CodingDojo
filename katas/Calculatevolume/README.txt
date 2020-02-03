@@ -1,16 +1,15 @@
-Dieses Projekt würde aus Visual Studio 2019 konzipiert und Umgesetzt
+Dieses Projekt wÃ¼rde aus Visual Studio 2019 konzipiert und Umgesetzt
 
 Voraussetzung
 1. Umgebung: Microsoft Visual Studio IDE >= 2015  IDE mit Windows Presentation Foundation
 
-
 Anweisungen
-1. Klonen Sie sich die repository auf Ihr eigene arbeitsplatz (z.B., "C:\Users\raj\Documents\WpfApplication")
-2. öffnen Sie sich das WpfApplication.sln Datei in Visual Studio Software
-3. nachdem Sie überprüft haben, dass das Projekt vollständig in den Lösungsexplorer geladen ist, 
-   führen Sie das Projekt aus oder drucken Sie die F5-Taste auf der Tastatur ein.
-4. durchsuchen Sie das depthValuesCSV file
-5. wählen Sie eine Einheit mit dem Optionsfeld z. B. "cubic Feet" or "cubic meter" or "barrels"
-6. klicken Sie auf die Schaltfläche "Rechnen", um das Volumen zu berechnen
-7. beobachten Sie den berechneten Wert im Textfeld "Volumen wert".
-8. klicken Sie auf "Beenden", um die Anwendung zu beenden
+1. Klonen Sie sich das repository auf Ihr eigene arbeitsplatz (z.B., "C:\Benutzername\source\repos\eigeneordnername")
+2. Von Micosoft Visual Studio IDE Software, Datei-->Ã–ffnen-->Datei,  Ã¶ffnen Sie sich das >>C:\Benutzername\source\repos\eigeneordnername\katas\Calculatevolume\WpfApplication\WpfApplication.csproj<< Datei       
+3. nachdem Sie sich Ã¼berprÃ¼ft haben, dass das Projekt vollstÃ¤ndig in Projektemappen-Explorer geladen werden
+   fÃ¼hren Sie sich das Projekt aus oder drÃ¼cken Sie die Taste F5 auf der Tastatur
+4. eine OberflÃ¤che erscheint in wenigen Sekunden, auf dem oberflÃ¤che die BrowseDatei knopf anklicken und depthvalues.csv datei einfÃ¼gen    >>C:\Benutzername\source\repos\eigeneordnername\katas\Calculatevolume\depthvalues.csv<< 
+5. wÃ¤hlen Sie sich die Einheit mit dem Optionsfeld z. B. "cubic Feet" oder "cubic meter" oder "barrels"
+6. klicken Sie auf die SchaltflÃ¤che "Rechnen" an, um das Volumen zu berechnen
+7. die berechneten Wert im Textfeld "Volumen wert" beobachten
+8. nach der Berechnung der Volumen in verschiedenen Einheiten schlieÃŸen Sie die Anwendung. DafÃ¼r klicken Sie auf "Beenden", um die Anwendung zu beenden.
