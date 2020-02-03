@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication4"
+        mc:Ignorable="d"
+        Title="Das Öl und gas volumen semi-automatish aus einer CSV-Datei rechnen" Height="900" Width="1200">
+    <Grid Margin="-15,0,-93,-208" Height="900" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1200">
+        <Button x:Name="button"  HorizontalAlignment="Left" Margin="175,258,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="BrowseDatei"/>
+        </Button>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="69" Margin="301,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="703"/>
+        <Button x:Name="button1" Content="Rechnen" HorizontalAlignment="Left" Margin="175,522,0,0" VerticalAlignment="Top" Width="75" Click="buttoncalculate_click"/>
+        <RadioButton x:Name="radioButton" Content="cubic feet" HorizontalAlignment="Left" Margin="229,411,0,0" VerticalAlignment="Top" IsChecked="True" />
+        <RadioButton x:Name="radioButton1" Content="cubic meter" HorizontalAlignment="Left" Margin="523,411,0,0" VerticalAlignment="Top"  />
+        <RadioButton x:Name="radioButton2" Content="barrels" HorizontalAlignment="Left" Margin="805,411,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="36" Margin="443,522,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="561"/>
+        <Label x:Name="label" Content="Volumen wert" HorizontalAlignment="Left" Margin="320,522,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.347,0.488"/>
+        <Label x:Name="label1" Content="Bitte daten einheit Wählen" HorizontalAlignment="Left" Height="36" Margin="169,378,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label x:Name="label2" Content="Anweisungen" HorizontalAlignment="Left" Margin="536,-60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.839,0.224"/>
+        <Label x:Name="label3" Content="1. Browse Datei" HorizontalAlignment="Left" Margin="538,-15,0,0" VerticalAlignment="Top" Width="295"/>
+        <Label x:Name="label4" Content="2. Daten Einheit Wählen" HorizontalAlignment="Left" Height="35" Margin="538,24,0,0" VerticalAlignment="Top" Width="197"/>
+        <Label x:Name="label5" Content="3. Volumen Rechnen" HorizontalAlignment="Left" Margin="538,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.211" Width="177"/>
+        <Button x:Name="button2" Content="Beenden" HorizontalAlignment="Left" Margin="561,623,0,0" VerticalAlignment="Top" Width="75" Click="buttonclose_click"/>
+
+    </Grid>
+</Window>
