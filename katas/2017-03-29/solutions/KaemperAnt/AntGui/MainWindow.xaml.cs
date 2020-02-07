@@ -85,6 +85,35 @@ namespace AntGui
             }
         }
 
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrEmpty(txtFileName.Text))
+            {
+                MessageBox.Show("Please enter filename");
+                return false;
+            }
+
+            if (!File.Exists(txtFileName.Text))
+            {
+                MessageBox.Show(string.Format("Can't read file {0}", txtFileName.Text));
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtStepDelay.Text))
+            {
+                MessageBox.Show("Please enter step delay");
+                return false;
+            }
+
+            if (!double.TryParse(txtStepDelay.Text, out _))
+            {
+                MessageBox.Show("Please enter valid number for step delay");
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnOpenFile_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
@@ -96,6 +125,8 @@ namespace AntGui
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidateInput()) return;
+
             steps = new Queue<string>(File.ReadAllLines(txtFileName.Text));
 
             stepTimer.Interval = TimeSpan.FromSeconds(double.Parse(txtStepDelay.Text));
@@ -137,12 +168,8 @@ namespace AntGui
                 }
             }
 
+            btnStart.IsEnabled = false;
             stepTimer.Start();
-        }
-
-        private void Window_ContentRendered(object sender, EventArgs e)
-        {
-        
         }
 
         private void StepTimer_Tick(object sender, EventArgs e)
@@ -154,6 +181,7 @@ namespace AntGui
             else
             {
                 stepTimer.Stop();
+                btnStart.IsEnabled = true;
             }
         }
     }
