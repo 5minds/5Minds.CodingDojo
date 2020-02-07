@@ -22,6 +22,8 @@ namespace AntGui
         private Queue<string> steps;
 
         private int boardSize;
+        private int currentStep;
+        private int maxSteps;
 
         private DispatcherTimer stepTimer;
 
@@ -114,6 +116,11 @@ namespace AntGui
             return true;
         }
 
+        private void UpdateStepCount()
+        {
+            lblSteps.Content = string.Format("{0} / {1}", currentStep, maxSteps);
+        }
+
         private void btnOpenFile_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
@@ -128,6 +135,11 @@ namespace AntGui
             if (!ValidateInput()) return;
 
             steps = new Queue<string>(File.ReadAllLines(txtFileName.Text));
+
+            currentStep = 1;
+            maxSteps = steps.Count;
+
+            UpdateStepCount();
 
             stepTimer.Interval = TimeSpan.FromSeconds(double.Parse(txtStepDelay.Text));
 
@@ -177,6 +189,8 @@ namespace AntGui
             if (steps.Any())
             {
                 DrawBoard(steps.Dequeue());
+                currentStep++;
+                UpdateStepCount();
             }
             else
             {

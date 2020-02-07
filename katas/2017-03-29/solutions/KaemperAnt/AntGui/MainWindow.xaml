@@ -26,6 +26,7 @@
             <TextBox Name="txtStepDelay" Width="30">0,5</TextBox>
         </WrapPanel>
         <Button Name="btnStart" Grid.Column="2" Grid.Row="0" Click="btnStart_Click">Start</Button>
+        <Label Grid.Column="2" Grid.Row="1" Name="lblSteps">0 / 0</Label>
         <Canvas Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Name="canvasBoard" ClipToBounds="True">
             <Image Name="imgAnt" Source="/AntGui;component/images/ant.png" Width="32" Height="32" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="1" Visibility="Hidden"/>
         </Canvas>
