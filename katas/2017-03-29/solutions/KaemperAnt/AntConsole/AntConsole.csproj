@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Andreas Kämper</Authors>
+    <Description>Generates a simulation file containing the movements of Langton's Ant</Description>
+  </PropertyGroup>
+
+</Project>
