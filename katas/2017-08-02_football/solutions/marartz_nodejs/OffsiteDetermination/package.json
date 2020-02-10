@@ -1,0 +1,23 @@
+{
+  "name": "offsite-determination",
+  "version": "0.1.0",
+  "description": "OffsiteDetermination",
+  "main": "src/app.js",
+  "author": {
+    "name": "Marco Artz"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "test": "mocha build/test/**/*.js"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.8",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^8.10.59",
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {}
+}
