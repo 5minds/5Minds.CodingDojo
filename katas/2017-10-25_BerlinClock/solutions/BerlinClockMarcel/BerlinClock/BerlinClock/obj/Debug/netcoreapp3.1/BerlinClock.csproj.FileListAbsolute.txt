@@ -1,0 +1,17 @@
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.exe
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.deps.json
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.runtimeconfig.json
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.runtimeconfig.dev.json
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.dll
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\bin\Debug\netcoreapp3.1\BerlinClock.pdb
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.csprojAssemblyReference.cache
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock_MarkupCompile.cache
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock_MarkupCompile.lref
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.g.resources
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.AssemblyInfoInputs.cache
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.AssemblyInfo.cs
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.dll
+C:\Users\marce\source\repos\BerlinClock\BerlinClock\obj\Debug\netcoreapp3.1\BerlinClock.pdb
