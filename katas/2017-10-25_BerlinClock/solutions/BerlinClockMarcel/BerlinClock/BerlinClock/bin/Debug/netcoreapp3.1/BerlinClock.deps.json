@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BerlinClock/1.0.0": {
+        "runtime": {
+          "BerlinClock.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BerlinClock/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
