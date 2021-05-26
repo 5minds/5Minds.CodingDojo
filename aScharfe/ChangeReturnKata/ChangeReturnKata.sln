@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeReturnKata", "ChangeReturnKata\ChangeReturnKata.csproj", "{6E7AAAD1-206D-4ECF-B6C4-2503C7F7EDEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeReturnUnitTest", "ChangeReturnUnitTest\ChangeReturnUnitTest.csproj", "{1A707AA2-2C8E-4F69-A3A3-E26A4EDAC275}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E7AAAD1-206D-4ECF-B6C4-2503C7F7EDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7AAAD1-206D-4ECF-B6C4-2503C7F7EDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7AAAD1-206D-4ECF-B6C4-2503C7F7EDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7AAAD1-206D-4ECF-B6C4-2503C7F7EDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A707AA2-2C8E-4F69-A3A3-E26A4EDAC275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A707AA2-2C8E-4F69-A3A3-E26A4EDAC275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A707AA2-2C8E-4F69-A3A3-E26A4EDAC275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A707AA2-2C8E-4F69-A3A3-E26A4EDAC275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED53BD9D-07C8-4CE2-B03E-9796D0F98834}
+	EndGlobalSection
+EndGlobal
