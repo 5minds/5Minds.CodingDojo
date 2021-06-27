@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PangramChecker.UI</name>
+    </assembly>
+    <members>
+        <member name="T:PangramChecker.UI.Program">
+            <summary>
+            Einstiegspunkt zur Pangram Pruefung.
+            </summary>
+        </member>
+    </members>
+</doc>

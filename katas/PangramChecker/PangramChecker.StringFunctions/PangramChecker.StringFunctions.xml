@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PangramChecker.StringFunctions</name>
+    </assembly>
+    <members>
+        <member name="T:PangramChecker.StringFunctions.Extensions.Constants">
+            <summary>
+            Definitons.
+            </summary>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.Extensions.Constants.AlphaLettersForCheck">
+            <summary>
+             Gets the alpha letters for check.
+            </summary>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.Extensions.Constants.IsExactlyPangramMessage">
+            <summary>
+             Gets the message for this case, when its true pangram.
+            </summary>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.Extensions.Constants.IsPangramWithMorelettersMessage">
+            <summary>
+             Gets the message for this case, when its not a pangram. But is more than one letter inside.
+            </summary>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.Extensions.Constants.IsNoPangramMessage">
+            <summary>
+             Gets the message for this case, when its not a pangram.
+            </summary>
+        </member>
+        <member name="T:PangramChecker.StringFunctions.IPangram">
+            <summary>
+            Interface for the Pangram Class.
+            </summary>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.IPangram.Result">
+            <summary>
+            Gets the Result of the Check fpr Pangram.
+            </summary>
+        </member>
+        <member name="T:PangramChecker.StringFunctions.Pangram">
+            <summary>
+            This class checks strings about pangrams.
+            </summary>
+        </member>
+        <member name="M:PangramChecker.StringFunctions.Pangram.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PangramChecker.StringFunctions.Pangram"/> class.
+            </summary>
+            <param name="stringSequence">String sequence to check for pangram.</param>
+        </member>
+        <member name="P:PangramChecker.StringFunctions.Pangram.Result">
+            <summary>
+            Gets the check result.
+            </summary>
+        </member>
+    </members>
+</doc>
