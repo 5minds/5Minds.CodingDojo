@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PangramChecker.StringFunctions.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:PangramChecker.StringFunctions.Tests.PangramTests">
+            <summary>
+            Testclass for Pangram Class.
+            </summary>
+        </member>
+        <member name="M:PangramChecker.StringFunctions.Tests.PangramTests.CheckStringSequenceForPangramTest(System.String,System.Int32[])">
+            <summary>
+            Method to test the private methode CheckStringSequenceForPangram.
+            </summary>
+            <param name="stringSequence">A pangram sequence.</param>
+            <param name="expectedValue">The expected Value.</param>
+        </member>
+        <member name="M:PangramChecker.StringFunctions.Tests.PangramTests.ParseResultArrayTest(System.Int32[],System.String)">
+            <summary>
+            Method to test the private methode ParseResultArray.
+            </summary>
+            <param name="array">The arry fill with examples.</param>
+            <param name="expectedText">The expected Value.</param>
+        </member>
+    </members>
+</doc>
