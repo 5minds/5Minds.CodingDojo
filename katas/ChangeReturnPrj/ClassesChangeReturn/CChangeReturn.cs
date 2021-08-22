@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ChangeReturn
+namespace ClassesChangeReturn
 {
-    class CChangeReturn
+    public class CChangeReturn
     {
-        private decimal[] arrValidChanges;
+        public decimal[] arrValidChanges;
         public CChangeReturn(){
 
             arrValidChanges = new decimal[11]{100, 50, 20, 10, 5, (decimal) 0.5, (decimal) 0.2, (decimal) 0.1, (decimal) 0.05, (decimal) 0.02, (decimal) 0.01};
