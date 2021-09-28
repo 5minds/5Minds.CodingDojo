@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeReturn", "ChangeReturn\ChangeReturn.csproj", "{84486603-E23D-485E-898F-3E646CEA5393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeReturnTests", "ChangeReturnTests\ChangeReturnTests.csproj", "{FBCA0A70-06B6-4FE7-851E-6BD766C0B849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84486603-E23D-485E-898F-3E646CEA5393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84486603-E23D-485E-898F-3E646CEA5393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84486603-E23D-485E-898F-3E646CEA5393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84486603-E23D-485E-898F-3E646CEA5393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCA0A70-06B6-4FE7-851E-6BD766C0B849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCA0A70-06B6-4FE7-851E-6BD766C0B849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCA0A70-06B6-4FE7-851E-6BD766C0B849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCA0A70-06B6-4FE7-851E-6BD766C0B849}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50D2D029-E9DD-471F-8785-8609E83352B8}
+	EndGlobalSection
+EndGlobal
