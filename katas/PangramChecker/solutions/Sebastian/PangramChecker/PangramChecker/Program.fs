@@ -3,7 +3,7 @@ open System
 
 let alphabet = ['a'..'z']
 
-// check if input conatins all alphabet letters
+// check if input contains all alphabet letters
 let isPangram (input: string) = 
     alphabet |> Seq.forall (fun x -> input.Contains x)
 
