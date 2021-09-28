@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="pangram.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
