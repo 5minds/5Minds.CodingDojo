@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: 
+      context: ./client
+    ports: 
+      - 1338:80
+  microservice:
+    build: 
+      context: ./GeschenkeMS
+    ports:
+      - "1337:80"
+    volumes:
+      - ./GeschenkeMS:/src
