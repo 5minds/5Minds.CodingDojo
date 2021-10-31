@@ -1,7 +1,43 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+@using FizzBuzz.Shared
+@inject HttpClient Http
 
-Welcome to your new app.
+<h1>Fizz Buzz!</h1>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<p>Please select the variation and enter the last number.</p>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in data)
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private string[] data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        data = await Http.GetFromJsonAsync<string[]>("FB");
+        //data = await Http.GetFromJsonAsync<string[]>("FB" + $"?variationNumber={1}&&max={10}");
+        //data = await Http.GetFromJsonAsync<string[]>("FB" + $"/{1}/{10}");
+    }
+
+}

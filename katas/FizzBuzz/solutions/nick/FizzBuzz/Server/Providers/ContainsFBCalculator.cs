@@ -3,8 +3,13 @@ using FizzBuzz.Shared.Domain.Providers;
 
 namespace FizzBuzz.Server.Providers
 {
-    public class ContainsFBCalculator : IFBCalculator
+    public class ContainsFBCalculator : BaseFBCalculator, IFBCalculator
     {
+        public ContainsFBCalculator()
+        {
+            Variation = EVariation.Contains;
+        }
+
         public EFizzBuzz Get(int number)
         {
             string numberText = $"{number}";

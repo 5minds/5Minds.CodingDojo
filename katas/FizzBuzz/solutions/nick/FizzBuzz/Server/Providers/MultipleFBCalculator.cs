@@ -1,13 +1,15 @@
-﻿using System;
-
-using FizzBuzz.Shared.Domain.Model.Enums;
+﻿using FizzBuzz.Shared.Domain.Model.Enums;
 using FizzBuzz.Shared.Domain.Providers;
 
 namespace FizzBuzz.Server.Providers
 {
-    public class MultipleFBCalculator : IFBCalculator
+    public class MultipleFBCalculator : BaseFBCalculator, IFBCalculator
     {
-      
+        public MultipleFBCalculator()
+        {
+            Variation = EVariation.Multiple;
+        }
+
         EFizzBuzz IFBCalculator.Get(int number)
         {
             bool multiple3 = number % 3 == 0;

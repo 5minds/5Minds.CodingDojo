@@ -24,13 +24,20 @@ namespace FizzBuzz.Server.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Get(int variationNumber, int max)
+        public IEnumerable<string> Get()
         {
-            Logger.LogDebug("Detecting the variation...");
-            EVariation variation = VariationDetectionService.Get(variationNumber);
-
-            Logger.LogDebug("Getting data...");
-            return FBService.Get(variation, max);
+            return FBService.Get(EVariation.Contains, 10);
         }
+
+        //[HttpGet]
+        //[Route("[controller]/{variationNumber}/{max}")]
+        //public IEnumerable<string> Get(int variationNumber, int max)
+        //{
+        //    Logger.LogDebug("Detecting the variation...");
+        //    EVariation variation = VariationDetectionService.Get(variationNumber);
+
+        //    Logger.LogDebug("Getting data...");
+        //    return FBService.Get(variation, max);
+        //}
     }
 }
