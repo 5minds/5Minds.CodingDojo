@@ -3,7 +3,7 @@ using FizzBuzz.Shared.Domain.Services;
 
 namespace FizzBuzz.Server.Services
 {
-    public class FBTranslator : IFBTranslator
+    public class FBTranslationService : IFBTranslationService
     {
         public string Get(EFizzBuzz fizzBuzz, int number) => fizzBuzz switch
         {

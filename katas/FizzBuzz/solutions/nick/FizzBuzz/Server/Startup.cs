@@ -22,7 +22,7 @@ namespace FizzBuzz.Server
         {
             services.AddScoped<IVariationDetectionService, VariationDetectionService>();
             services.AddScoped<IFBService, FBService>();
-            services.AddScoped<IFBTranslator, FBTranslator>();
+            services.AddScoped<IFBTranslationService, FBTranslationService>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

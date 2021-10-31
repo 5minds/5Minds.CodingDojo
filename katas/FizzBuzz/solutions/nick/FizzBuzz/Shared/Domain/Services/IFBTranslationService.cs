@@ -2,7 +2,7 @@
 
 namespace FizzBuzz.Shared.Domain.Services
 {
-    public interface IFBTranslator
+    public interface IFBTranslationService
     {
         string Get(EFizzBuzz fizzBuzz, int number);
     }

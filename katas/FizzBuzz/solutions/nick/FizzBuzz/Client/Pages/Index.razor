@@ -1,6 +1,7 @@
 ﻿@page "/"
 
 @using FizzBuzz.Shared
+@using System.Threading
 @inject HttpClient Http
 
 <h1>Fizz Buzz!</h1>
@@ -35,9 +36,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        data = await Http.GetFromJsonAsync<string[]>("FB");
-        //data = await Http.GetFromJsonAsync<string[]>("FB" + $"?variationNumber={1}&&max={10}");
-        //data = await Http.GetFromJsonAsync<string[]>("FB" + $"/{1}/{10}");
+        data = await Http.GetFromJsonAsync<string[]>("FB" + $"?variationNumber={1}&&max={16}");
     }
-
 }

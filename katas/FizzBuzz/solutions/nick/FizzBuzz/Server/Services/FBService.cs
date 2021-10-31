@@ -10,7 +10,7 @@ namespace FizzBuzz.Server.Services
 {
     public class FBService : IFBService
     {
-        private readonly IFBTranslator FBTranslator;
+        private readonly IFBTranslationService FBTranslationService;
 
         private List<IFBCalculator> FBCalculators = new List<IFBCalculator>
         {
@@ -18,9 +18,9 @@ namespace FizzBuzz.Server.Services
             new MultipleFBCalculator()
         };
 
-        public FBService(IFBTranslator fBTranslator)
+        public FBService(IFBTranslationService fBTranslationService)
         {
-            FBTranslator = fBTranslator;
+            FBTranslationService = fBTranslationService;
         }
 
         public IEnumerable<string> Get(EVariation variation, int max)
@@ -30,7 +30,7 @@ namespace FizzBuzz.Server.Services
 
             return Enumerable.Range(1, max)
                 .Select(N =>
-                    FBTranslator.Get(fBCalculator.Get(N), N)
+                    FBTranslationService.Get(fBCalculator.Get(N), N)
                 );
         }
     }
