@@ -3,6 +3,9 @@ using FizzBuzz.Shared.Domain.Providers;
 
 namespace FizzBuzz.Server.Providers
 {
+    /// <summary>
+    /// A FBCalculator that functions based of existence of a digit in the given number.
+    /// </summary>
     public class ContainingFBCalculator : BaseFBCalculator, IFBCalculator
     {
         public ContainingFBCalculator()
@@ -10,6 +13,14 @@ namespace FizzBuzz.Server.Providers
             Variation = EVariation.Containing;
         }
 
+        /// <summary>
+        /// Returns a EFizzBuzz based of the existence of a  digit in the given number.
+        /// If the number contains both 3 and 5, returns FizzBuzz,
+        /// if the number contains just 3 returns Fizz and if it contains 5, Buzz,
+        /// otherwise None.
+        /// </summary>
+        /// <param name="number">A number to get its EFizzBuzz</param>
+        /// <returns>The Calculated EFizzBuzz</returns>
         public EFizzBuzz Get(int number)
         {
             string numberText = $"{number}";

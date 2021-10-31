@@ -7,6 +7,9 @@ using DataAnnotationsExtensions;
 
 namespace FizzBuzz.Client.Pages
 {
+    /// <summary>
+    /// Keeps the settings required to consume the api.
+    /// </summary>
     public class SettingsModel
     {
         [Min(0)]
