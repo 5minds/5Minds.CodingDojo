@@ -3,6 +3,6 @@
     public enum EVariation
     {
         Multiple = 0,
-        Contains = 1
+        Containing = 1
     }
 }

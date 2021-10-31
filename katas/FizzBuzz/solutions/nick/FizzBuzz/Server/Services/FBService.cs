@@ -14,7 +14,7 @@ namespace FizzBuzz.Server.Services
 
         private List<IFBCalculator> FBCalculators = new List<IFBCalculator>
         {
-            new ContainsFBCalculator(),
+            new ContainingFBCalculator(),
             new MultipleFBCalculator()
         };
 

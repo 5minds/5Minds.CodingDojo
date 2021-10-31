@@ -7,12 +7,31 @@
 <h1>Fizz Buzz!</h1>
 
 <p>Please select the variation and enter the last number.</p>
+<EditForm Model="SettingsModel" OnValidSubmit="HandleSubmitButtonClickAsync" class="control-group ">
+    <h3>Variation:</h3>
+    <InputRadioGroup @bind-Value="SettingsModel.VariationNumber">
+        <InputRadio Value=0 /> Multiple of 3 or 5  <br />
+        <InputRadio Value=1 /> Coantaining of 3 or 5
+    </InputRadioGroup>
 
-@if (data == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
+    <h3>Last number:</h3>
+    <InputNumber @bind-Value="SettingsModel.Max" class="form-control" />
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mt-2 mb-4">
+        <button type="submit" class="btn btn-primary">
+            <span class="ml-2 oi oi-cloud-upload"></span>
+            <span>Submit</span>
+        </button>
+
+        <button type="button" @onclick="Reset" class="btn btn-secondary mr-1">
+            <span class="oi oi-action-undo"></span>
+        </button>
+    </div>
+</EditForm>
+@if (!IsLoading)
 {
     <table class="table">
         <thead>
@@ -21,7 +40,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in data)
+            @foreach (var item in Data)
             {
                 <tr>
                     <td>@item</td>
@@ -32,10 +51,31 @@ else
 }
 
 @code {
-    private string[] data;
+    private string[] Data;
+    private bool IsLoading = true;
+    private SettingsModel SettingsModel = new();
 
     protected override async Task OnInitializedAsync()
     {
-        data = await Http.GetFromJsonAsync<string[]>("FB" + $"?variationNumber={1}&&max={16}");
+        Reset();
+        await UpdateDataAsync();
+    }
+
+    private async Task UpdateDataAsync()
+    {
+        IsLoading = true;
+        Data = await Http.GetFromJsonAsync<string[]>("FB" + $"?variationNumber={SettingsModel.VariationNumber}&&max={SettingsModel.Max}");
+        IsLoading = false;
+    }
+
+    private void Reset()
+    {
+        SettingsModel.Max = 100;
+        SettingsModel.VariationNumber = 0;
+    }
+
+    private async Task HandleSubmitButtonClickAsync()
+    {
+        await UpdateDataAsync();
     }
 }
