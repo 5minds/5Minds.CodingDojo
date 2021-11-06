@@ -253,3 +253,5 @@ paket-files/
 *.sln.iml
 
 katas/2017-10-25_BerlinClock/cfreytag/service/clockApi/.vscode/
+
+katas/2017-10-25_BerlinClock/cfreytag/service/clockApi/appsettings.Development.json
