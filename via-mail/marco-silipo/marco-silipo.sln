@@ -1,6 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pangram-checker", "pangram-checker\pangram-checker.csproj", "{2552796B-0F48-4CE2-AB19-F90FE2348FD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pangram-checker-app", "pangram-checker-app\pangram-checker-app.csproj", "{2552796B-0F48-4CE2-AB19-F90FE2348FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pangram-checker-tests", "pangram-checker-tests\pangram-checker-tests.csproj", "{BF33F1CF-492B-4F1E-A76F-817A08FF82DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pangram Checker", "Pangram Checker", "{766AD987-306E-41C2-8C59-A034FD5B9B4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pangram-checker", "pangram-checker\pangram-checker.csproj", "{47604BF8-54E3-4DA3-BA38-29BF0EF007FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common", "common\common.csproj", "{FA8BF909-1D3B-4033-8D15-D4B31DADEFDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common-tests", "common-tests\common-tests.csproj", "{0CD6479B-F319-40AD-AB16-E27A8CF812C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +22,26 @@ Global
 		{2552796B-0F48-4CE2-AB19-F90FE2348FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2552796B-0F48-4CE2-AB19-F90FE2348FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2552796B-0F48-4CE2-AB19-F90FE2348FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF33F1CF-492B-4F1E-A76F-817A08FF82DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF33F1CF-492B-4F1E-A76F-817A08FF82DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF33F1CF-492B-4F1E-A76F-817A08FF82DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF33F1CF-492B-4F1E-A76F-817A08FF82DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47604BF8-54E3-4DA3-BA38-29BF0EF007FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47604BF8-54E3-4DA3-BA38-29BF0EF007FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47604BF8-54E3-4DA3-BA38-29BF0EF007FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47604BF8-54E3-4DA3-BA38-29BF0EF007FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8BF909-1D3B-4033-8D15-D4B31DADEFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8BF909-1D3B-4033-8D15-D4B31DADEFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8BF909-1D3B-4033-8D15-D4B31DADEFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8BF909-1D3B-4033-8D15-D4B31DADEFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD6479B-F319-40AD-AB16-E27A8CF812C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD6479B-F319-40AD-AB16-E27A8CF812C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD6479B-F319-40AD-AB16-E27A8CF812C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD6479B-F319-40AD-AB16-E27A8CF812C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47604BF8-54E3-4DA3-BA38-29BF0EF007FB} = {766AD987-306E-41C2-8C59-A034FD5B9B4C}
+		{2552796B-0F48-4CE2-AB19-F90FE2348FD4} = {766AD987-306E-41C2-8C59-A034FD5B9B4C}
+		{BF33F1CF-492B-4F1E-A76F-817A08FF82DB} = {766AD987-306E-41C2-8C59-A034FD5B9B4C}
 	EndGlobalSection
 EndGlobal
