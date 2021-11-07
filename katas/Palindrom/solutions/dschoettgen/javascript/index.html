@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der ultimative Palindrome-Checker</title>
+    <style>
+
+        div.wrapper {
+            background: rgba(131, 131, 131, 0.6);
+            padding: 10px; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            height: 26px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        p#check-result-text {
+            padding: 5px;
+        }
+
+        .bg-red { 
+            background-color: red;
+            color: #fff;
+        }
+
+        .bg-green {
+            background-color: chartreuse;
+            color: #000;  
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="wrapper">
+        <h1>Der ultimative Palindrome-Checker:</h1>
+        <form>
+            <label>Deine Eingabe</label>
+            <input id="text" type="text" placeholder="zu überprüfendes Wort oder Satz">
+            <button type="button" onClick="checkValueIsPalindrome()">Check it!</button>
+        </form>
+        <p id="check-result-text"></p>
+    </div>
+
+
+    <script>
+
+        var inputText       = document.getElementById("text");
+        var checkResultText = document.getElementById("check-result-text");
+
+         function checkValueIsPalindrome() {
+
+            checkResultText.innerText = '';
+            checkResultText.className = '';
+
+            var text = inputText.value;
+
+            if(text.length > 0 && !/\d/.test(text))
+            {
+                
+                var filteredText = text.split(/[.,\/ -;!?()]/).join('').toLowerCase();
+                var reversedText = Array.from(filteredText).reverse().join('');
+
+                if(filteredText == reversedText) {
+                    checkResultText.innerText = "Es handlet sich um ein Palindrome.";
+                    checkResultText.classList.add('bg-green');
+                } else {
+                    checkResultText.innerText = "Es handlet sich nicht um ein Palindrome.";
+                    checkResultText.classList.add('bg-red');
+                }
+            } else {
+                checkResultText.innerText = "Bitte überprüfe deine Eingabe.";
+                checkResultText.classList.add('bg-red');
+            }
+         }   
+
+    </script>
+  </body>
+</html>
