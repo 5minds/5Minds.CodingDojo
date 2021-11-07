@@ -1,8 +1,7 @@
 {
   "profiles": {
     "csharp": {
-      "commandName": "Project",
-      "commandLineArgs": ":F D:\\Develop\\5Minds\\katas\\Palindrom\\solutions\\dschoettgen\\csharp\\csharp\\Resources\\Palindrome1.txt"
+      "commandName": "Project"
     }
   }
 }
