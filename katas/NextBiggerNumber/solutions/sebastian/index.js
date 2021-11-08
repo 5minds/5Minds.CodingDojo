@@ -37,6 +37,10 @@ class NextBiggerNumber {
     this.properties.getAllNumber.push(parseInt(newNumber));
   }
 
+   /** 
+   * Mein Ziel war bei gegebene Ziffern in alle möglichen Reifenfolge vertauschen und in einen Array packen, anschließend sortieren und dann nächst höhere Index eines Array von der gegebenen Zahl ausgeben.
+   * Leider fiel mir zur Zeit keine praktische gute Lösung ein.
+   * */
   handleNumber(number) {
     let numberInString = number.toString();
     let numberCount = numberInString.length;
