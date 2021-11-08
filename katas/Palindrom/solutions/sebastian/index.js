@@ -8,14 +8,23 @@
 * Reliefpfeiler
 * Rentner
 * Dienstmannamtsneid 
+*
+* Auch Palindromsätze sind möglich. 
+* Handelt es sich um einen Satz, so sind Leer- und Satzzeichen zu vernachlässigen.
+*  
+* Beispiele:
+* Tarne nie deinen Rat!
+* Eine güldne, gute Tugend: Lüge nie! 
+* Ein agiler Hit reizt sie. Geist?! Biertrunk nur treibt sie. Geist ziert ihre Liga nie!
 * */
 class Palindrom {
   constructor() {
   }
 
-  checkWord(word) {
+  check(word) {
 
-    let handleWord = word.trim().toUpperCase();
+    let handleWord = word.toUpperCase().replace(/[.,?\/#!$%\^&\*;:{}=\-_`~()\s]/g,"");
+    console.log(handleWord);
     let wordLength = handleWord.length;
 
     if (wordLength <= 1) {
@@ -35,8 +44,11 @@ class Palindrom {
   }
 }
 const palindrom = new Palindrom();
-palindrom.checkWord(" ABA  ");
-palindrom.checkWord("Lagerregal");
-palindrom.checkWord("Reliefpfeiler");
-palindrom.checkWord("Rentner");
-palindrom.checkWord("Dienstmannamtsneid");
+palindrom.check(" ABA  ");
+palindrom.check("Lagerregal");
+palindrom.check("Reliefpfeiler");
+palindrom.check("Rentner");
+palindrom.check("Dienstmannamtsneid");
+palindrom.check("Tarne nie deinen Rat!");
+palindrom.check("Eine güldne, gute Tugend: Lüge nie!");
+palindrom.check("Ein agiler Hit reizt sie. Geist?! Biertrunk nur treibt sie. Geist ziert ihre Liga nie!");
