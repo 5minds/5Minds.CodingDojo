@@ -44,8 +44,8 @@
     <div class="wrapper">
         <h1>Der ultimative Palindrome-Checker:</h1>
         <form>
-            <label>Deine Eingabe</label>
-            <input id="text" type="text" placeholder="zu überprüfendes Wort oder Satz">
+            <label>Deine Eingabe:</label>
+            <input id="text" type="text" placeholder="zu überprüfendes Wort oder Satz" />
             <button type="button" onClick="checkValueIsPalindrome()">Check it!</button>
         </form>
         <p id="check-result-text"></p>
@@ -57,7 +57,7 @@
         var inputText       = document.getElementById("text");
         var checkResultText = document.getElementById("check-result-text");
 
-         function checkValueIsPalindrome() {
+        function checkValueIsPalindrome() {
 
             checkResultText.innerText = '';
             checkResultText.className = '';
@@ -71,17 +71,17 @@
                 var reversedText = Array.from(filteredText).reverse().join('');
 
                 if(filteredText == reversedText) {
-                    checkResultText.innerText = "Es handlet sich um ein Palindrome.";
+                    checkResultText.innerText = "Es handelt sich um ein Palindrome.";
                     checkResultText.classList.add('bg-green');
                 } else {
-                    checkResultText.innerText = "Es handlet sich nicht um ein Palindrome.";
+                    checkResultText.innerText = "Es handelt sich nicht um ein Palindrome.";
                     checkResultText.classList.add('bg-red');
                 }
             } else {
                 checkResultText.innerText = "Bitte überprüfe deine Eingabe.";
                 checkResultText.classList.add('bg-red');
             }
-         }   
+        }   
 
     </script>
   </body>
