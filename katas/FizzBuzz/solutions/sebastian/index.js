@@ -1,3 +1,11 @@
+/* * 
+* Für Vielfache von 3 gib "Fizz" zurück.  
+* Für Vielfache von 5 gib "Buzz" zurück.  
+* Für Vielfache von 3 und 5 gib "FizzBuzz" zurück.  
+* Fizz“ soll auch zurückgegeben werden, wenn die Zahl eine 3 als Ziffer enthält, z.B. 13.  
+* Buzz“ soll auch zurückgegeben werden, wenn die Zahl eine 5 als Ziffer enthält, z.B. 52.  
+* FizzBuzz" soll auch zurückgegeben werden, wenn die Zahl eine 3 und eine 5 enthält, z.B. 35 oder 53. 
+* */
 class FizzBuzz {
   constructor() {
     this.limit = 100;
