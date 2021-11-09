@@ -39,12 +39,30 @@ namespace FizzBuzz
 
         public string FizzBuzzSimple(int start = 1, int end = 100)
         {
-            throw new NotImplementedException();
+            var builder = new StringBuilder();
+
+            for(var i = start; i <= end; i++)
+            {
+                builder.Append(ConvertNumber(i, false));
+                builder.Append(",");
+            }
+
+            var result = builder.ToString().TrimEnd(',');
+            return result;
         }
 
         public string FizzBuzzVariation(int start = 1, int end = 100)
         {
-            throw new NotImplementedException();
+            var builder = new StringBuilder();
+
+            for (var i = start; i <= end; i++)
+            {
+                builder.Append(ConvertNumber(i, true));
+                builder.Append(",");
+            }
+
+            var result = builder.ToString().TrimEnd(',');
+            return result;
         }
     }
 }
