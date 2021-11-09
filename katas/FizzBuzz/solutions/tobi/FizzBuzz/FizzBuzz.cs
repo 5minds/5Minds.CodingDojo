@@ -15,9 +15,26 @@ namespace FizzBuzz
 
     public class FizzBuzz : IFizzBuzz
     {
+        public const string FizzStr = "Fizz";
+        public const string BuzzStr = "Buzz";
+        public const string FizzBuzzStr = "FizzBuzz";
+
         public string ConvertNumber(int number, bool extended)
         {
-            throw new NotImplementedException();
+            if((number % 3 == 0 && number % 5 == 0) || (extended && number.ToString().Contains("3") && number.ToString().Contains("5")))
+            {
+                return FizzBuzzStr;
+            }
+            else if(number % 3 == 0 || (extended && number.ToString().Contains("3")))
+            {
+                return FizzStr;
+            }
+            else if(number % 5 == 0 || (extended && number.ToString().Contains("5")))
+            {
+                return BuzzStr;
+            }
+
+            return number.ToString();
         }
 
         public string FizzBuzzSimple(int start = 1, int end = 100)
