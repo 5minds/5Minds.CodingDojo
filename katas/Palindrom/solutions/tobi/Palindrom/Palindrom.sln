@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrom", "Palindrom.csproj", "{4965EE3A-89CC-488C-ACF6-3271117FD7F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrom.Tests", "..\Palindrom.Tests\Palindrom.Tests.csproj", "{1E93F635-B245-4328-A593-B175169AB518}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4965EE3A-89CC-488C-ACF6-3271117FD7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4965EE3A-89CC-488C-ACF6-3271117FD7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4965EE3A-89CC-488C-ACF6-3271117FD7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E93F635-B245-4328-A593-B175169AB518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E93F635-B245-4328-A593-B175169AB518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E93F635-B245-4328-A593-B175169AB518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E93F635-B245-4328-A593-B175169AB518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Palindrom
 {
-    public interface IPalindromFinder
+    public interface IPalindromChecker
     {
         bool IsPalindrom(string text);
     }
 
-    public class PalindromFinder : IPalindromFinder
+    public class PalindromChecker : IPalindromChecker
     {
         public bool IsPalindrom(string text)
         {
