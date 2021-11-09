@@ -39,6 +39,11 @@ namespace FizzBuzz
 
         public string FizzBuzzSimple(int start = 1, int end = 100)
         {
+            if(start > end)
+            {
+                throw new ArgumentException("End cannot be smaller than start");
+            }
+
             var builder = new StringBuilder();
 
             for(var i = start; i <= end; i++)
@@ -53,6 +58,11 @@ namespace FizzBuzz
 
         public string FizzBuzzVariation(int start = 1, int end = 100)
         {
+            if (start > end)
+            {
+                throw new ArgumentException("End cannot be smaller than start");
+            }
+
             var builder = new StringBuilder();
 
             for (var i = start; i <= end; i++)

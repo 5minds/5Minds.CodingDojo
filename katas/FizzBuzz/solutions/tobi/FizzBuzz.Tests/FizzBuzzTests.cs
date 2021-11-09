@@ -65,5 +65,19 @@ namespace FizzBuzz.Tests
             var result = fizzBuzz.FizzBuzzVariation(start, end);
             Assert.Equal(expectedResult, result);
         }
+
+        [Fact]
+        public void FizzBuzzSimple_ThrowsOnInvalidData()
+        {
+            var fizzBuzz = new FizzBuzz();
+            Assert.Throws<ArgumentException>(() => fizzBuzz.FizzBuzzSimple(10, 1));
+        }
+
+        [Fact]
+        public void FizzBuzzVariation_ThrowsOnInvalidData()
+        {
+            var fizzBuzz = new FizzBuzz();
+            Assert.Throws<ArgumentException>(() => fizzBuzz.FizzBuzzVariation(10, 1));
+        }
     }
 }
