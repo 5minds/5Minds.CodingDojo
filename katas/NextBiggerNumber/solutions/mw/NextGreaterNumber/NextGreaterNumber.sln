@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGreaterNumber", "NextGreaterNumber\NextGreaterNumber.csproj", "{D2DF311E-052D-4DB2-B73E-151FF9102931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGreaterNumber.Test", "NextGreaterNumber.Test\NextGreaterNumber.Test.csproj", "{26891EF6-7D20-43DA-8476-CCF27E8368AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2DF311E-052D-4DB2-B73E-151FF9102931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DF311E-052D-4DB2-B73E-151FF9102931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DF311E-052D-4DB2-B73E-151FF9102931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DF311E-052D-4DB2-B73E-151FF9102931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26891EF6-7D20-43DA-8476-CCF27E8368AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26891EF6-7D20-43DA-8476-CCF27E8368AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26891EF6-7D20-43DA-8476-CCF27E8368AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26891EF6-7D20-43DA-8476-CCF27E8368AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
