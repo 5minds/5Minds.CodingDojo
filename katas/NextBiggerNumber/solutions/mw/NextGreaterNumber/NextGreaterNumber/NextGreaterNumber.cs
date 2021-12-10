@@ -40,13 +40,14 @@ namespace NextGreaterNumber
 
                 Swap(array, index - 1, minimum);
 
-                // 5. sort ascending after swap
+                // 5. sort ascending after swap from swapped position to end of array
 
                 Array.Sort(array, index, length-index);
 
+                // construct an int from array
                 var result = array.Aggregate((result, digit) => result * 10 + digit);
 
-                return (result > 0 ? result : -1); // construct an int from array
+                return (result > 0 ? result : -1); 
             }
             catch (Exception e) // Parse, Sort, Aggregate can throw exceptions - catch any for simplicity
             {
