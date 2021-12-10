@@ -38,7 +38,7 @@ namespace NextGreaterNumber
 
                 // 4. swap these two
 
-                Swap(array, index - 1, minimum);
+                SwapPositions(array, index - 1, minimum);
 
                 // 5. sort ascending after swap from swapped position to end of array
 
@@ -56,7 +56,7 @@ namespace NextGreaterNumber
             }
         }
 
-        private static void Swap(long[] array, int first, int second) => 
+        private static void SwapPositions(long[] array, int first, int second) => 
             (array[first], array[second]) = (array[second], array[first]);
     }
 }
