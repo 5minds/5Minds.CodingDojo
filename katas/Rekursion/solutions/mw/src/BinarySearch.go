@@ -16,6 +16,6 @@ func BinarySearch(inputArray []int, target int) int {
 	} else if inputArray[mid] < target { // take right partial array
 		return BinarySearch(inputArray[mid+1:], target)
 	} else {
-		return mid // target is at mid of array
+		return inputArray[mid] // target is at mid of array
 	}
 }
