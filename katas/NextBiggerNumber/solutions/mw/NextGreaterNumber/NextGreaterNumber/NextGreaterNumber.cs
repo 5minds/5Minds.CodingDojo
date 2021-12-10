@@ -5,14 +5,14 @@ namespace NextGreaterNumber
 {
     public class NextGreaterNumber
     {
-        internal int FindNextGreaterNumber(int number)
+        internal long FindNextGreaterNumber(long number)
         {
             try
             {
                 int index;
                 
                 // 1. create an array from the number that's passed in
-                var array = number.ToString().Select(digit => int.Parse
+                var array = number.ToString().Select(digit => long.Parse
                     (digit.ToString())).ToArray();
 
                 var length = array.Length;
@@ -55,7 +55,7 @@ namespace NextGreaterNumber
             }
         }
 
-        private static void Swap(int[] array, int first, int second) => 
+        private static void Swap(long[] array, int first, int second) => 
             (array[first], array[second]) = (array[second], array[first]);
     }
 }
