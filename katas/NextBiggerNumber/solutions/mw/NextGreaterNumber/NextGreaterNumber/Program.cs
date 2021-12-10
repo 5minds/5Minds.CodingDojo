@@ -6,6 +6,8 @@ namespace NextGreaterNumber
     {
         public static void Main()
         {
+            var nextGreater = new NextGreaterNumber();
+            Console.WriteLine(nextGreater.FindNextGreaterNumber(513));
         }
     }
 }
