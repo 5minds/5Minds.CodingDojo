@@ -5,5 +5,6 @@ namespace NextGreaterNumber
 {
     public class NextGreaterNumber
     {
+        throw new NotImplementedException();
     }
 }
