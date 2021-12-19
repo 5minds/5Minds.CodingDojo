@@ -1,0 +1,16 @@
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.exe
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.deps.json
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.json
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.dev.json
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.dll
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ref\ConsoleApp1.dll
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.pdb
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.dll
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
+C:\Visual Studio Projects\Dojos\5Minds\5Minds.CodingDojo-develop\katas\Palindrom\solutions\Waltraut\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache
