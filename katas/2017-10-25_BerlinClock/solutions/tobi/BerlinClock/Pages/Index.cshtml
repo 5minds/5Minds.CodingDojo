@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Berlin Clock";
+}
+
+<div class="text-center">
+    <div class="clock-wrapper">
+        @await Component.InvokeAsync("ClockSegment", new { id = "clock-segment-hour-first", segmentsNumber = 4, activeSegmentNumber = @Model.SegmentData.HourSegmentFirst })
+        @await Component.InvokeAsync("ClockSegment", new { id = "clock-segment-hour-second", segmentsNumber = 4, activeSegmentNumber = @Model.SegmentData.HourSegmentSecond })
+        @await Component.InvokeAsync("ClockSegment", new { id = "clock-segment-minute-first", segmentsNumber = 11, activeSegmentNumber = @Model.SegmentData.MinuteSegmentFirst })
+        @await Component.InvokeAsync("ClockSegment", new { id = "clock-segment-minute-second", segmentsNumber = 4, activeSegmentNumber = @Model.SegmentData.MinuteSegmentSecond })
+    </div>
+</div>
+
+<style>
+    .clock-wrapper {
+        text-align: center;
+        margin: auto;
+    }
+
+    .clock-segment {
+        width: 500px;
+        height: 100px;
+        border: 1px solid;
+        display: flex;
+    }
+
+    .clock-subsegment {
+        box-sizing: border-box;
+        border: 1px solid;
+        height: 100px;
+        display: inline-block;
+        background-color: #4d5152
+    }
+
+    .clock-segment .active {
+        background-color: #ff6800
+    }
+</style>
+
+<script>
+    setTimeout("location.reload(true);", (@IndexModel.SecondsToFetch * 1000));
+</script>
+

@@ -1,0 +1,18 @@
+﻿@using BerlinClock.Model
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ClockSegmentModel
+@{
+}
+
+<div class="clock-segment" id="@Model.Id">
+    @{
+        var elementWidth = $"{((1 / (double)Model.Segments) * 100.0).ToString().Replace(",", ".")}%";
+        for(var i = 0; i < Model.Segments; i++)
+        {
+            <div class="clock-subsegment @(Model.FilledSegments > i ? "active" : "")" style="width: @elementWidth">
+            </div>
+        }
+     }
+</div>
