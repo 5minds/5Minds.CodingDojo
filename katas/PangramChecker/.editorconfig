@@ -1,0 +1,9 @@
+﻿[*.cs]
+
+# SA0002: Invalid settings file
+dotnet_diagnostic.SA0002.severity = warning
+csharp_space_between_method_declaration_name_and_open_parenthesis=false
+dotnet_diagnostic.SA1200.severity=silent
+dotnet_diagnostic.SA1633.severity=silent
+dotnet_diagnostic.SA1309.severity=silent
+dotnet_diagnostic.SA1101.severity=silent
