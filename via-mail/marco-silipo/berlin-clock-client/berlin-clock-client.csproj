@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0-windows</TargetFramework>
+        <RootNamespace>BerlinClock.Client</RootNamespace>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="resources\icon.ico" />
+      <Resource Include="resources\icon.ico" />
+    </ItemGroup>
+
+</Project>

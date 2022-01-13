@@ -1,0 +1,65 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "berlin-clock-web-api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/BerlinClockTime": {
+      "get": {
+        "tags": [
+          "BerlinClockTime"
+        ],
+        "operationId": "GetBerlinClockTime",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BerlinClockTime"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BerlinClockTime"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BerlinClockTime"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BerlinClockTime": {
+        "type": "object",
+        "properties": {
+          "hourFive": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hourOne": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minuteFive": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minuteOne": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
