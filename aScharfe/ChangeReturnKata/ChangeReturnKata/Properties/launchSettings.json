@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ChangeReturnKata": {
+      "commandName": "Project",
+      "commandLineArgs": "1500,00 1238,56",
+      "workingDirectory": "C:\\Users\\andre\\source\\repos\\ChangeReturnKata\\ChangeReturnKata\\bin\\Debug"
+    }
+  }
+}

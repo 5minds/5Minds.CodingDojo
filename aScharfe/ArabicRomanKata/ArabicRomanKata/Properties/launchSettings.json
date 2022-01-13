@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ArabicRomanConverter": {
+      "commandName": "Project",
+      "commandLineArgs": "P",
+      "workingDirectory": "C:\\Users\\andre\\source\\repos\\ArabicRomanKata\\ArabicRomanKata\\bin\\Debug"
+    }
+  }
+}
