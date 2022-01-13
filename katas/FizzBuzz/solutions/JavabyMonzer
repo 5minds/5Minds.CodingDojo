@@ -1,0 +1,22 @@
+public class Main {
+
+	public static void main(String[] args) {
+	
+	
+			String s="";
+			for(int i=1; i<100; i++) {
+				s=String.valueOf(i);
+				if((s.contains("3") && s.contains("5")) || (i%15==0)) {
+					System.out.println("FizzBuzz");
+				}else if(s.contains("3") || (i%3==0)) {
+					System.out.println("Fizz");
+				}else if(s.contains("5") || (i%5==0)) {
+					System.out.println("Buzz");
+				}else {
+				System.out.println(i);
+				}
+			}
+		}
+
+			
+	}
