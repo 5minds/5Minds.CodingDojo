@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Berlin Clock</title>
+    <meta lang="de" />
+    <meta charset="utf-8" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        .center {
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+        }
+        .main-container {
+            min-height: 50vh; display: flex; flex-direction: column; justify-content: center; justify-items: center;
+            width:100%;
+        }
+        .clock {
+            width: 25vw;
+            margin: auto;
+            text-align: center;
+        }
+        .secondSelector>span {
+            display: block;
+            margin: 0.5rem auto;
+            border:1px solid black;
+            border-radius: 1000px;
+            width:36px;
+            height:36px;
+            color: white;
+            overflow: hidden;
+        }
+        .secondSelector>span.is-filled {
+            background: black;
+            color: black;
+        }
+        .hours>div {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .hours span {
+            display: inline-block;
+            border: 1px solid black;
+            color: #fff;
+            height:40px;
+            width:25px;
+            padding: 1px;
+            margin: 0 2px;
+        }
+        .hours span.fill {
+            color: black;
+            background-color: black;
+        }
+        .minutes>div {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .minutes span {
+            display: inline-block;
+            border: 1px solid black;
+            color: #fff;
+            height:35px;
+            width:25px;
+            padding: 1px;
+            margin: 0 2px;
+            overflow:hidden;
+        }
+        .minutes .minuteFivesSelector span {
+            width:10px;
+        }
+        .minutes span.fill {
+            color: black;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 class="center">The Berlin Clock (showing GMT)</h1>
+        <h4 class="center">Totally overengineered, but a lot of fun</h4>
+    </section>
+    <section class="container main-container">
+        <div class="clock">
+            <div id="secondsContainer" class="row secondSelector">{{secondSelector}}</div>
+            <div class="row hours">
+                <div id="hourFivesContainer" class="hoursFivesSelector">{{hoursFivesSelector}}</div>
+                <div id="hoursContainer" class="hoursSelector">{{hoursSelector}}</div>
+            </div>
+            <div class="row minutes">
+                <div id="minuteFivesContainer" class="row minuteFivesSelector">{{minuteFivesSelector}}</div>
+                <div id="minutesContainer" class="row minutesSelector">{{minutesSelector}}</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function updateClock(timeObject) {
+            var secondsContainer = document.getElementById("secondsContainer");
+            var hourFivesContainer = document.getElementById("hourFivesContainer");
+            var hoursContainer = document.getElementById("hoursContainer");
+            var minuteFivesContainer = document.getElementById("minuteFivesContainer");
+            var minutesContainer = document.getElementById("minutesContainer");
+
+            secondsContainer.innerHTML = `<span class="${(parseInt(timeObject.second, 10) === 1) ? 'is-filled' : ''}">${parseInt(timeObject.second, 10) === 1 ? '(O)' : '( )' }</span>`;
+            hourFivesContainer.innerHTML = "X".repeat(parseInt(timeObject.hourFives, 10)).padEnd(4,'O').replace(/X/g, "<span class='fill'>[X]</span>").replace(/O/g, "<span>[ ]</span>");
+            hoursContainer.innerHTML = "X".repeat(parseInt(timeObject.hourRest, 10)).padEnd(4,'O').replace(/X/g, "<span class='fill'>[X]</span>").replace(/O/g, "<span>[ ]</span>"); //"<span class='fill'>[X]</span>".repeat(parseInt(timeObject.hourRest, 10)).padEnd(4,'<span>[ ]</span>');
+            minuteFivesContainer.innerHTML = "X".repeat(parseInt(timeObject.minuteFives, 10)).padEnd(11,'O').replace(/X/g, "<span class='fill'>[X]</span>").replace(/O/g, "<span>[ ]</span>"); //"<span class='fill minuteFive'>[X]</span>".repeat(parseInt(timeObject.minuteFives, 10)).padEnd(11,'<span>[ ]</span>');
+            minutesContainer.innerHTML = "X".repeat(parseInt(timeObject.minuteRest, 10)).padEnd(4,'O').replace(/X/g, "<span class='fill'>[X]</span>").replace(/O/g, "<span>[ ]</span>"); // "<span class='fill'>[X]</span>".repeat(parseInt(timeObject.minuteRest, 10)).padEnd(4,'<span>[ ]</span>');
+        };
+        function getTime() {
+            try {
+                var currentDate = new Date();
+                var dateString = currentDate.toISOString();
+                return fetch("http://localhost:3000/full?datetime="+encodeURIComponent(dateString))
+                .then(function(result) {
+                    result.json().then(function(rsParsed){
+                        console.log(rsParsed);
+                        updateClock(rsParsed);
+                    })
+                })
+                .catch(function(error) {})
+            } catch(err) {
+                console.error(err);
+            }
+        }
+        var run = function() {
+            window.setInterval(getTime,500);
+        }
+        run();
+    </script>
+</body>
+</html>
