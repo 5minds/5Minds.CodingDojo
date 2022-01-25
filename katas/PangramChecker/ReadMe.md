@@ -1,13 +1,23 @@
-﻿# PangramChecker
+# node-typescript-jest-boilerplate
 
-Dieses Projekt ist in C# geschreiben.  
-Hier habe ich ein wenig ausgeholt und versucht gängige Strukturen umzusetzen.  
-KISS und SOLID habe ich umgesetzt.  
+Boilerplate for a node server or library written in typescript, using jest as
+the test runner.
 
-Mir ist auch ijn diesem Projekt bewusst, es in einem kleiner Umfang erstellen zu können.  
-Wenn man UnitTests benutzt, müssen gewisse Gegebenheiten existieren, um diese auch richtig verwenden zu können.  
-Man könnte die einzelnen Programmteile trennen und in einer Komponentenentwicklung übergehen.  
-Daher habe ich bewusst auf eine Layer Struktur verzichtet. Da ich in diesem Beispiel auf Serialisierung von Daten verzichte,   
-wäre eine DataLayer Schicht eh fehl am Platze.  
+## Usage
 
-Der Programmablauf ist selbsterklärend.
+Clone the boilerplate as a new project:
+
+```bash
+git clone https://github.com/bschlenk/node-typescript-jest-boilerplate.git <project>
+```
+
+Update [package.json](package.json) as you see fit.
+
+## Modifications
+
+If this is for a library only, then chances are you don't need nodemon. You can
+make the following changes to remove it:
+
+- Delete `nodemon.json`
+- Remove `watch` from `package.json` scripts
+- Remove `nodemon` from `package.json` devDependencies
