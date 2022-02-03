@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BST", "BST\BST.csproj", "{ACAB5FD7-6E59-4B1C-A972-6948A34C821F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBstNunit", "TestBstNunit\TestBstNunit.csproj", "{FF264D7F-5EA6-40EF-AAFB-8F04148D5382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACAB5FD7-6E59-4B1C-A972-6948A34C821F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAB5FD7-6E59-4B1C-A972-6948A34C821F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAB5FD7-6E59-4B1C-A972-6948A34C821F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAB5FD7-6E59-4B1C-A972-6948A34C821F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF264D7F-5EA6-40EF-AAFB-8F04148D5382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF264D7F-5EA6-40EF-AAFB-8F04148D5382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF264D7F-5EA6-40EF-AAFB-8F04148D5382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF264D7F-5EA6-40EF-AAFB-8F04148D5382}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B36CE91C-37D5-493E-93A0-3743709BE1BE}
+	EndGlobalSection
+EndGlobal
