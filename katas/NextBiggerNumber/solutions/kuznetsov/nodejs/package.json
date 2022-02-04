@@ -1,0 +1,18 @@
+{
+  "name": "nodejs",
+  "version": "0.0.0",
+  "description": "nodejs",
+  "main": "app.js",
+  "author": {
+    "name": "Ilya Kuznetsov"
+  },
+  "scripts": {
+    "run": "node app.js",
+    "watch": "mocha --recursive -R min --watch",
+    "test": "mocha --recursive"
+  },
+  "devDependencies": {
+    "mocha": "9.2.0",
+    "assert": "2.0.0"
+  }
+}
