@@ -21,7 +21,7 @@ namespace Recruiting.SyrtsouD.Holidays.API.Factories
 			{
 				Name = holiday.Name,
 				Description = holiday.Description,
-				DateFormatted = $"{holiday.Day}.{holiday.Month}"
+				DateFormatted = $"{holiday.Day:00}.{holiday.Month:00}"
 			};
 		}
 	}

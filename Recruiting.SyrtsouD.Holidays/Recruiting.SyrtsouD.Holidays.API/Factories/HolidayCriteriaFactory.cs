@@ -10,7 +10,7 @@ namespace Recruiting.SyrtsouD.Holidays.API.Factories
 		{
 			return new HolidayCriteria
 			{
-				CountryCode = request.CountryCode,
+				CountryCode = request.CountryCode ?? "US",
 				Year = request.Year ?? DateTime.UtcNow.Year
 			};
 		}
