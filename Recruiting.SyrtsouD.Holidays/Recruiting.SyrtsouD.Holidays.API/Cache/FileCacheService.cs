@@ -20,7 +20,7 @@ namespace Recruiting.SyrtsouD.Holidays.API.Cache
 		public bool TryGet<T>(string key, out T cached)
 		{
 			var result = false;
-			cached = default(T);
+			cached = default;
 
 			var fileName = GetFilePath(key);
 
