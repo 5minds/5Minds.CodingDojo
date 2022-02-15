@@ -1,7 +1,9 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Recruiting.SyrtsouD.Holidays.API.Cache;
 using Recruiting.SyrtsouD.Holidays.API.Clients;
 using Recruiting.SyrtsouD.Holidays.API.Factories;
 using Recruiting.SyrtsouD.Holidays.API.Resolvers;
@@ -22,6 +24,7 @@ namespace Recruiting.SyrtsouD.Holidays.API
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllers();
+			services.AddMemoryCache();
 
 			services.AddTransient<IHolidayService, HolidayService>();
 			services.AddTransient<IHolidayCriteriaFactory, HolidayCriteriaFactory>();
@@ -29,6 +32,9 @@ namespace Recruiting.SyrtsouD.Holidays.API
 			services.AddTransient<ICalendarificConfigurationsResolver, CalendarificConfigurationsResolver>();
 			services.AddSingleton<ICalendarificClient, CalendarificClient>();
 			services.AddSingleton<IHolidayFactory, HolidayFactory>();
+			services.AddTransient<MemoryCacheService, MemoryCacheService>();
+			services.AddTransient<IHolidayCache>(p =>
+				new HolidayCache(p.GetService<MemoryCacheService>(), new FileCacheService(TimeSpan.FromDays(1))));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
