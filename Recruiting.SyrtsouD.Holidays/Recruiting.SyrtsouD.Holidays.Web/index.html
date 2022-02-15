@@ -4,32 +4,42 @@
 	<title>Holidays</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/holidays.css" rel="stylesheet" />
-	<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/holidays.js"></script>
 </head>
 
 <body>
 	<div class="container">
-
-		<h1>
-			Holidays overview by country: <div class="btn-group">
-				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<div class="h1">
+			Holidays overview by country:
+			<div class="btn-group">
+				<button type="button" class="btn btn-secondary dropdown-toggle country-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Country
 				</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">USA</a>
-					<a class="dropdown-item" href="#">Canada</a>
+				<div class="dropdown-menu country-items">
+					<a class="dropdown-item" href="#" data-country-code="US">USA</a>
+					<a class="dropdown-item" href="#" data-country-code="CA">Canada</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Germany</a>
-					<a class="dropdown-item" href="#">France</a>
-					<a class="dropdown-item" href="#">Belarus</a>
+					<a class="dropdown-item" href="#" data-country-code="DE">Germany</a>
+					<a class="dropdown-item" href="#" data-country-code="ES">Spain</a>
+					<a class="dropdown-item" href="#" data-country-code="BY">Belarus</a>
 				</div>
 			</div>
-		</h1>
+			<div class="btn-group hide year-button-container">
+				<button type="button" class="btn btn-secondary dropdown-toggle year-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					2022
+				</button>
+				<div class="dropdown-menu year-items">
+					<a class="dropdown-item" href="#" data-year="2022">2022</a>
+					<a class="dropdown-item" href="#" data-year="2023">2023</a>
+				</div>
+			</div>
+		</div>
 		<p class="lead">In this page you have a possibility to check which national holidays there are in a selected country.</p>
 
-		<div class="holidays">
+		<div class="holidays hide">
 			<div class="header">
 				<div class="row">
 					<div class="col-md-3">Date</div>
@@ -37,7 +47,7 @@
 					<div class="col-md-6">Description</div>
 				</div>
 			</div>
-			
+
 			<div class="results">
 				<div class="row">
 					<div class="col-md-3">01.01</div>
@@ -53,5 +63,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>
