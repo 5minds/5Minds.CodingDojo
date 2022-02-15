@@ -1,0 +1,24 @@
+body {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.row {
+	margin-bottom: 1rem;
+	border: 1px solid black;
+}
+
+.row div[class*="col-"] {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #eeeeee;
+}
+
+.even [class*="col-"] {
+	background-color: #dddddd !important;
+}
+
+.header [class*="col-"] {
+	font-weight: bold;
+	background-color: transparent !important;
+}
