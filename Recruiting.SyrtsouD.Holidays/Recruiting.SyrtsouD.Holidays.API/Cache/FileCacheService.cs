@@ -34,7 +34,10 @@ namespace Recruiting.SyrtsouD.Holidays.API.Cache
 				{
 					var content = File.ReadAllText(fileName);
 
-					cached = JsonConvert.DeserializeObject<T>(content);
+					cached = JsonConvert.DeserializeObject<T>(content, new JsonSerializerSettings
+					{
+						TypeNameHandling = TypeNameHandling.Auto
+					});
 					result = true;
 				}
 			}
