@@ -44,6 +44,7 @@ namespace Recruiting.SyrtsouD.Holidays.API
 			app.UseStaticFiles();
 
 			app.UseRouting();
+			app.UseCors(x => x.AllowAnyOrigin());
 
 			app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 		}

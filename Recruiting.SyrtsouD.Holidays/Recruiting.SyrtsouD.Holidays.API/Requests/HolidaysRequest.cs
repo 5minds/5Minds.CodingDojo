@@ -2,8 +2,8 @@
 {
 	public class HolidaysRequest
 	{
-		public int? Year { get; }
+		public int? Year { get; set; }
 
-		public string CountryCode { get; }
+		public string CountryCode { get; set; }
 	}
 }
