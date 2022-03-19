@@ -6,9 +6,6 @@ public class FizzBuzz {
     {
         String outString = "";
 
-
-
         return outString;
     }
-
 }
