@@ -14,12 +14,13 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void PalinTest()
     {
         Assert.True(_palindrome.IsPalindrome("Abba"));
         Assert.True(_palindrome.IsPalindrome("Lagerregal"));
         Assert.True(_palindrome.IsPalindrome("Reliefpfeiler"));
         Assert.True(_palindrome.IsPalindrome("Rentner"));
         Assert.True(_palindrome.IsPalindrome("Dienstmannamtsneid"));
+        Assert.False(_palindrome.IsPalindrome("Test"));
     }
 }
