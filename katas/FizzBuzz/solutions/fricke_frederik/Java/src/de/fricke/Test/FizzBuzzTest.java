@@ -29,7 +29,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void FizzBuzzTest()
+    public void CompleteFizzBuzzTest()
     {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("FizzBuzz", fizzBuzz.isFizzBuzz(15));
