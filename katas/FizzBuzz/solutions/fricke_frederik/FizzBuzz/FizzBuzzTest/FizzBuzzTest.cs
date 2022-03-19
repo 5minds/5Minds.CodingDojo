@@ -5,32 +5,34 @@ using FizzBuzz;
 
 public class Tests
 {
+    private FizzBuzz fizzBuzz;
     [SetUp]
     public void Setup()
     {
+        fizzBuzz = new FizzBuzz();
     }
 
     [Test]
     public void FizzTest()
     {
-        Assert.AreEqual("Fizz", FizzBuzz.isFizzBuzz(13));
-        Assert.AreEqual("Fizz", FizzBuzz.isFizzBuzz(9));
-        Assert.AreEqual("Fizz", FizzBuzz.isFizzBuzz(12));
+        Assert.AreEqual("Fizz", fizzBuzz.IsFizzBuzz(13));
+        Assert.AreEqual("Fizz", fizzBuzz.IsFizzBuzz(9));
+        Assert.AreEqual("Fizz", fizzBuzz.IsFizzBuzz(12));
     }
 
     [Test]
     public void BuzzTest()
     {
-        Assert.AreEqual("Buzz", FizzBuzz.isFizzBuzz(10));
-        Assert.AreEqual("Buzz", FizzBuzz.isFizzBuzz(52));
-        Assert.AreEqual("Buzz", FizzBuzz.isFizzBuzz(59));
+        Assert.AreEqual("Buzz", fizzBuzz.IsFizzBuzz(10));
+        Assert.AreEqual("Buzz", fizzBuzz.IsFizzBuzz(52));
+        Assert.AreEqual("Buzz", fizzBuzz.IsFizzBuzz(59));
     }
 
     [Test]
     public void FizzBuzzTest()
     {
-        Assert.AreEqual("FizzBuzz", FizzBuzz.isFizzBuzz(15));
-        Assert.AreEqual("FizzBuzz", FizzBuzz.isFizzBuzz(53));
-        Assert.AreEqual("FizzBuzz", FizzBuzz.isFizzBuzz(30));
+        Assert.AreEqual("FizzBuzz", fizzBuzz.IsFizzBuzz(15));
+        Assert.AreEqual("FizzBuzz", fizzBuzz.IsFizzBuzz(53));
+        Assert.AreEqual("FizzBuzz", fizzBuzz.IsFizzBuzz(30));
     }
 }
