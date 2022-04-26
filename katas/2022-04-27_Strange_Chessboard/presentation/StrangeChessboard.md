@@ -4,9 +4,9 @@ Anstatt alle Zeilen und Spalten auf seinen Schachbrettern gleich groß zu machen
 
 ![Schachbrett](../presentation/assets/chessboard.png "Schachbrett")
 
-Hier sind zum Beispiel die Spezifikationen seines neuesten 5x5-Schachbretts:
-```cs = [ 3, 1, 2, 7, 1 ]``` enthält die 5 Breiten der 5 Spalten.
-```rs = [ 1, 8, 4, 5, 2 ]``` enthält die 5 Höhen der 5 Zeilen.
+Hier sind zum Beispiel die Spezifikationen seines neuesten 5x5-Schachbretts:  
+```cs = [ 3, 1, 2, 7, 1 ]``` enthält die 5 Breiten der 5 Spalten.  
+```rs = [ 1, 8, 4, 5, 2 ]``` enthält die 5 Höhen der 5 Zeilen.  
 
 In den obigen Beispielen für ```cs``` und ```rs``` ist die Breite der 4. Spalte des Schachbretts 7, die Höhe der 2. Reihe des Schachbretts 8 usw.
 
