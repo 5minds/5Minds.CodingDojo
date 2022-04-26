@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "f33c943d-3269-4226-9571-b9981abdc041",
+		"name": "ProductApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products/99",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Chai-Latte\",\r\n    \"unitPrice\": 18.0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7045/api/Products/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7045",
+					"path": [
+						"api",
+						"Products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 99,\r\n    \"name\": \"Tea for Two\",\r\n    \"unitPrice\": 22.0\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODataGetProductsSelect",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products?$select=Name,UnitPrice",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "$select",
+							"value": "Name,UnitPrice"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODataGetProductsFiltering",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products?$filter=Name eq 'Thüringer Rostbratwurst'",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "Name eq 'Thüringer Rostbratwurst'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ODataGetProductsOrderBy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{Port}}/api/Products?$orderby=UnitPrice desc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "$orderby",
+							"value": "UnitPrice desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsFromProductApi",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:{{Port}}/productapi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"productapi"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Port",
+			"value": "7045",
+			"type": "string"
+		}
+	]
+}
