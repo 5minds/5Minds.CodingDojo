@@ -7,6 +7,7 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.io.IOException;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 public class WeirdChessServiceBenchmark {
@@ -40,6 +41,7 @@ public class WeirdChessServiceBenchmark {
     }
 
     @Benchmark
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Threads(4)
     @Fork(value = 5, warmups = 1)
     @BenchmarkMode(Mode.SingleShotTime)
