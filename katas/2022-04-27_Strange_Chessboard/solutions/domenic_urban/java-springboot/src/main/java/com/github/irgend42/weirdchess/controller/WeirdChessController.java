@@ -17,7 +17,7 @@ public class WeirdChessController {
     private final WeirdChessService chessService;
 
     @GetMapping("calculateFieldSizes")
-    ResponseEntity<Integer[]> calculateFieldSizes(@RequestParam List<Integer> cs, @RequestParam List<Integer> rs){
+    ResponseEntity<Long[]> calculateFieldSizes(@RequestParam List<Integer> cs, @RequestParam List<Integer> rs){
         return ResponseEntity.ok(chessService.calculatePane(cs, rs));
     }
 }
