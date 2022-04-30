@@ -19,7 +19,7 @@ namespace BerlinClock.WebApi
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.12.1.0 (NJsonSchema v10.4.6.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class Client 
     {
-        private string _baseUrl = "";
+        private string _baseUrl = "https://localhost:7003";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<System.Text.Json.JsonSerializerOptions> _settings;
     

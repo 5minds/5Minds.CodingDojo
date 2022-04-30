@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Berlin Clock", "Berlin Clock", "{C6566EDD-6A63-4977-903F-C8E4765ABF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "berlin-clock-web-api", "berlin-clock-web-api\berlin-clock-web-api.csproj", "{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "berlin-clock-client", "berlin-clock-client\berlin-clock-client.csproj", "{75952B53-6372-48B5-BD85-117D2E27B74A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75952B53-6372-48B5-BD85-117D2E27B74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75952B53-6372-48B5-BD85-117D2E27B74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75952B53-6372-48B5-BD85-117D2E27B74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75952B53-6372-48B5-BD85-117D2E27B74A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94E7F0DC-9454-4F92-9DA3-F8923EB6E9F9} = {C6566EDD-6A63-4977-903F-C8E4765ABF1B}
+		{75952B53-6372-48B5-BD85-117D2E27B74A} = {C6566EDD-6A63-4977-903F-C8E4765ABF1B}
+	EndGlobalSection
+EndGlobal
