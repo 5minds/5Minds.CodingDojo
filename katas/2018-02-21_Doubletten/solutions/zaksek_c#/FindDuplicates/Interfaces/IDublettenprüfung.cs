@@ -3,8 +3,10 @@ using FindDuplicates.Enums;
 
 namespace FindDuplicates.Interfaces
 {
-    public interface IDublettenprüfung {
+    public interface IDublettenprüfung 
+    {
         IEnumerable<IDublette> Sammle_Kandidaten(string pfad);
+
         IEnumerable<IDublette> Sammle_Kandidaten(string pfad, Vergleichsmodi modus);
  
         IEnumerable<IDublette> Prüfe_Kandidaten(IEnumerable<IDublette> kandidaten);

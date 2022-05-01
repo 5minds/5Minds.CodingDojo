@@ -5,13 +5,11 @@ namespace FindDuplicates.Models
 {
     public class Dublette : IDublette
     {
+        public IEnumerable<string> Dateipfade { get; }
+
         public Dublette(IEnumerable<string> dateipfade)
         {
             Dateipfade = dateipfade;
         }
-
-        public IEnumerable<string> Dateipfade { get; }
-
-
     }
 }

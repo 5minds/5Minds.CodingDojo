@@ -6,5 +6,4 @@ namespace FindDuplicates.Interfaces
     { 
         IEnumerable<string> Dateipfade {get;} 
     }
-
 }
