@@ -46,7 +46,7 @@ O...#...O..#........
 
 Das Handout, die Liste der Befehle und die Karte findest du unter:
 
-https://github.com/5minds/5Minds.CodingDojo/katas/2022-10-19_MercuryRover/presentation/assets/ 
+https://github.com/5minds/5Minds.CodingDojo/tree/develop/katas/2022-10-19_MercuryRover/presentation/assets 
 
 
 Let’s fly to Mercury…
